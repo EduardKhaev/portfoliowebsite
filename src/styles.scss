@@ -134,7 +134,6 @@ html {
 
 @mixin gitHubBtn{
   color: white;
-  border-style: 1px;
   border-color: #70e61c;
   border-radius: 10px;
   outline: none;
@@ -166,7 +165,7 @@ html {
         margin-right: 100px;
         gap: 100px;
             >.leftsidePT{
-
+              
             }
             >.rightsidePT{
                 display: flex;
