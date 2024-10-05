@@ -1,0 +1,15 @@
+@import '../../styles.scss';
+
+
+.scsstemplate{
+    @include portfolioTemplate;
+}
+.scsstemplatereverse{
+    @include portfolioTemplateReverse;
+}
+.purblebackground{
+    position: absolute;
+    top: -80px;
+    left: -300px;
+    z-index: -5;
+}

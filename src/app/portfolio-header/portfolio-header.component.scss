@@ -1,0 +1,38 @@
+@import '../../styles.scss';
+
+main{
+    margin-left: 100px;
+    >.portfoliotitle{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 32px;
+
+            >h1{
+                @include h1;
+                font-size: 90px;
+            }
+
+            >.emptydivleft{
+                width: 100px;
+                height: 3px;
+                @include purbleline;
+            }
+            >.emptydivright{
+                width: 507px;
+                height: 3px;
+                @include purbleline;
+            }
+
+    }
+    >div{
+        display: flex;
+        justify-content: center;
+        >span{
+            @include span;
+            margin-top: 40px;
+
+
+        }
+    }
+}

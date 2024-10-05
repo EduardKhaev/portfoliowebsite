@@ -77,12 +77,27 @@ html {
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 32px;
+    margin: 0;
   }
+}
+@mixin purbletext{
+  color: #9747ff;
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+}
+@mixin greentext{
+  color: #70e61c;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 23px;
+  margin: 0;
 }
 
 @mixin greenbutton {
   border-radius: 10px;
-  background-color: rgba(112, 230, 28, 1);
+  background-color: #70e61c;
   border-style: none;
   color: white;
   font-family: 'Poppins';
@@ -100,6 +115,151 @@ html {
     height: 3px;
     background-color: rgba(151, 71, 255, 1);
 }
+
+@mixin liveTestBtn{
+  color: white;
+  background-color: #9747ff;
+  border-radius: 10px;
+  width: 152px;
+  height: 58px;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 23px;
+  outline: none;
+    &:hover{
+      cursor: pointer;
+      background-color: #70e61c;
+    }
+}
+
+@mixin gitHubBtn{
+  color: white;
+  border-style: 1px;
+  border-color: #70e61c;
+  border-radius: 10px;
+  outline: none;
+  background-color: transparent;
+  width: 152px;
+  height: 58px;
+  border-width: 1px;
+  border-style: solid;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 23px;
+    &:hover{
+      cursor: pointer;
+      background-color: #70e61c;
+    }
+}
+
+
+@mixin portfolioTemplate{
+  main{
+    margin-left: 100px;
+    position: relative;
+    
+    
+    >.projecttemplate{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 100px;
+        gap: 100px;
+            >.leftsidePT{
+
+            }
+            >.rightsidePT{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                gap: 15px;
+                width: 513px;
+                >h2{
+                    @include purbletext;
+                }
+                >h3{
+                    @include greentext;
+                }
+                >span{
+                    @include span;
+                }
+                >.ButtonsPT{
+                    margin-top: 35px;
+                    gap: 86px;
+                    display: flex;
+                    >.LTBtn{
+                        @include liveTestBtn;
+                    }
+                    >.GHBtn{
+                        @include gitHubBtn;
+                    }
+                    
+                }
+            }
+            
+    }
+}
+}
+
+@mixin portfolioTemplateReverse{
+  main{
+    margin-left: 100px;
+    
+    
+    >.projecttemplate{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 100px;
+        gap: 100px;
+            >.leftsidePT{
+
+            }
+            >.rightsidePT{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                gap: 15px;
+                width: 513px;
+                >h2{
+                    @include purbletext;
+                }
+                >h3{
+                    @include greentext;
+                }
+                >span{
+                    @include span;
+                    text-align: end;
+                }
+                >.ButtonsPT{
+                    margin-top: 35px;
+                    gap: 86px;
+                    display: flex;
+                    >.LTBtn{
+                        @include liveTestBtn;
+                    }
+                    >.GHBtn{
+                        @include gitHubBtn;
+                    }
+                    
+                }
+            }
+            
+    }
+}
+}
+
+
+
+
+
+
+
+
+
 
 
 /* poppins-100 - latin */

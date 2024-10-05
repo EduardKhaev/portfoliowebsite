@@ -5,11 +5,15 @@ import { HeroComponent } from './hero/hero.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { MyskillsComponent } from './myskills/myskills.component';
 import { RouterOutlet } from '@angular/router';
+import { PortfolioComponent } from "./portfolio/portfolio.component";
+import { PortfolioHeaderComponent } from "./portfolio-header/portfolio-header.component";
+
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent, HeroComponent, AboutmeComponent, MyskillsComponent],
+  imports: [CommonModule, RouterOutlet, HeaderComponent, HeroComponent, AboutmeComponent, MyskillsComponent, PortfolioComponent, PortfolioHeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
