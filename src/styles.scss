@@ -20,7 +20,7 @@ html {
 }
 @mixin h3{ //Section Portfolio
   font-family: 'Poppins';
-  color: rgb(151, 71, 255);
+  color: #9747ff;
   margin: 0;
   font-weight: 700;
 }
@@ -37,7 +37,7 @@ html {
   text-align: center;
   margin: 0;
 }
-@mixin a { // Header Sectionlinks
+@mixin a {
   text-decoration: none;
   color: white;
   font-size: 23px;
@@ -49,21 +49,21 @@ html {
   }
 
   &.active {
-    rstreichung
-    &::after {
-      content: ''; // Leeres Pseudo-Element
-      position: absolute; // Absolut positioniert
-      left: 0; // Links ausrichten
-      bottom: -4px; // Abstand nach unten (z.B. 4px)
-      width: 50px; // Breite der position: relative; // Setze position relativ, um das Pseudo-Element zu positionieren
-    color: rgba(112, 230, 28, 1); // Textfarbe für den aktiven Link
+    color: rgba(112, 230, 28, 1);
+    position: relative; 
 
-    // Pseudo-Element für die UnteUnterstreichung (nach Bedarf anpassen)
-      height: 3px; // Höhe der Unterstreichung
-      background-color: rgb(151, 71, 255); // Farbe der Unterstreichung
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 50px;
+      height: 3px;
+      background-color: rgb(151, 71, 255);
     }
   }
 }
+
 @mixin colored-text {
   .white-text {
     color: white;

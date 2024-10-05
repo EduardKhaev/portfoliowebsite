@@ -1,13 +1,14 @@
 <main>
-    
     <div class="myskillsleft">
-        <div *ngFor="let skill of myskills" class="skill-item">
-          <img [src]="skill.imgSrc" [alt]="skill.name">
-          <p>{{ skill.name }}</p>
+        <div *ngFor="let skill of myskills; let last = last" class="skill-item" [ngClass]="{'no-hover': last}">
+            <img [src]="skill.imgSrc" [alt]="skill.name">
+            <p>{{ skill.name }}</p>
+            <span class="hover-message" *ngIf="last"><img src="../../assets/img/myskills/specialinterest.png" alt=""></span>
         </div>
     </div>
-    
+
     <div class="myskillsright">
+        <img src="../../assets/img/greenshadowmyskills.png" alt="">
         <div class="myskillstitle">
             <h1>My skills</h1>
             <div class="emptydiv"></div>
@@ -19,13 +20,9 @@
                 <span>&nbsp;</span>
                 <span class="purple-text">another skill</span>
                 <span class="white-text">?</span>
-                
             </p>
             <span class="contactme">Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
-
         </div>
         <button class="getInTouchBtn">Get in Touch</button>
-
     </div>
-
 </main>

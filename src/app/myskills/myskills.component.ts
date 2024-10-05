@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './myskills.component.html',
-  styleUrl: './myskills.component.scss'
+  styleUrls: ['./myskills.component.scss'] // Korrigiert von 'styleUrl' zu 'styleUrls'
 })
 export class MyskillsComponent {
 
@@ -21,9 +21,6 @@ export class MyskillsComponent {
     { imgSrc: '../../assets/img/myskills/api.png', name: 'API' },
     { imgSrc: '../../assets/img/myskills/scrum.png', name: 'Scrum' },
     { imgSrc: '../../assets/img/myskills/materialdesign.png', name: 'Material Design' },
-    { imgSrc: '../../assets/img/myskills/continuallylearning.png', name: 'Continually Learning' }
+    { imgSrc: '../../assets/img/myskills/continuallylearning.png', name: 'Continually Learning' },
   ];
-
-  
-
 }
