@@ -1,0 +1,31 @@
+<main>
+    
+    <div class="myskillsleft">
+        <div *ngFor="let skill of myskills" class="skill-item">
+          <img [src]="skill.imgSrc" [alt]="skill.name">
+          <p>{{ skill.name }}</p>
+        </div>
+    </div>
+    
+    <div class="myskillsright">
+        <div class="myskillstitle">
+            <h1>My skills</h1>
+            <div class="emptydiv"></div>
+        </div>
+        <div class="myskillsbody">
+            <span>I have gained experience in building projects with different frontend technologies and concepts.</span>
+            <p class="styled-text"> 
+                <span class="white-text">Looking for </span>
+                <span>&nbsp;</span>
+                <span class="purple-text">another skill</span>
+                <span class="white-text">?</span>
+                
+            </p>
+            <span class="contactme">Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
+
+        </div>
+        <button class="getInTouchBtn">Get in Touch</button>
+
+    </div>
+
+</main>

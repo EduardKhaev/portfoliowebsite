@@ -1,0 +1,152 @@
+@import '../../styles.scss';
+
+main{
+    margin-top: 292px;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+.herotopright{
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 718px;
+    height: 172px;
+    margin-right: 100px;
+    gap: 30px;
+
+        >.hero-name-specialization{
+            display: flex;
+            flex-direction: column;
+            margin-left: -50px;
+            >.heroname{
+                align-items: stretch;
+                width: 620px;
+                height: 172px;
+                
+                >h1{
+                    @include h1;
+                    font-size: 72px;
+                    margin: 0;
+                    white-space: nowrap;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    
+                      
+                }
+            }
+            >.herospecialization{
+                
+                align-items: stretch;
+                margin-top: -100px;
+                >span{
+                    color: rgb(151, 71, 255);
+                    font-size: 58px;
+                    white-space: nowrap;
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    margin: 0;
+                    width: 100%;
+                     
+                }
+            }
+        }
+        >.hero-i-am{
+                width: 152px;
+                height: 172px;
+                transform: rotate(270deg);
+
+                    >h2{
+                    color: white;
+                    font-size: 50px;
+                    font-family: 'Poppins';
+                    font-weight: 400;
+                    white-space: nowrap;
+                    margin-left: 10px;
+                    
+                    
+                }
+        }
+        >.greenbutton{
+            @include greenbutton;
+            position: absolute;
+            top: 200px;
+            right: 250px;
+            height: 58px;
+            width: 165px;
+            
+        }
+}
+.herobottomleft{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 566px;
+    position: absolute;
+    bottom: 100px;
+    
+            >.sociallinks{
+                display: flex;
+                gap: 32px;
+                >img{
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+            >.emptydiv{
+                @include purbleline;
+                width: 100px;
+            }
+            >.email{
+                width: 248px;
+                height: 28px;
+                
+                >a{
+                text-decoration: none;
+                font-family: 'Poppins';
+                font-weight: 400;
+                font-size: 20px;
+                color: white;
+                
+                }
+            }
+}
+.herobackground{
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    z-index: -5;
+}
+.coloredbackground{
+    position: absolute;
+    top: -120px;
+    left: -30px;
+    width: 900px;
+    z-index: -6;
+}
+.scrolldown{
+    display: flex;
+    position: absolute;
+    right: 30px;
+    bottom: 170px;
+    >span{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: white;
+        transform: rotate(90deg);
+        font-size: 23px;
+        font-family: 'Poppins';
+        font-weight: 400;
+        >img{
+            transform: rotate(270deg);
+            width: 15px;
+            height: 15px;
+        }
+    }
+}

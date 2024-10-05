@@ -1,1 +1,176 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    margin: 0;
+    background-color: rgba(20, 29, 47, 1);
+    z-index: -10;    
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  
+}
+
+
+
+@mixin h1 { //Section Titles 
+  font-family: 'Poppins';
+  color: white;
+  font-weight: 700;
+  margin: 0;
+}
+@mixin h3{ //Section Portfolio
+  font-family: 'Poppins';
+  color: rgb(151, 71, 255);
+  margin: 0;
+  font-weight: 700;
+}
+@mixin span{ //Bodytext
+  font-family: 'Poppins';
+  color: white;
+  font-weight: 400;
+}
+@mixin p {
+  font-family: 'Poppins';
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+@mixin a { // Header Sectionlinks
+  text-decoration: none;
+  color: white;
+  font-size: 23px;
+  font-family: 'Poppins';
+
+  &:hover {
+    cursor: pointer;
+    color: rgba(112, 230, 28, 1);
+  }
+
+  &.active {
+    rstreichung
+    &::after {
+      content: ''; // Leeres Pseudo-Element
+      position: absolute; // Absolut positioniert
+      left: 0; // Links ausrichten
+      bottom: -4px; // Abstand nach unten (z.B. 4px)
+      width: 50px; // Breite der position: relative; // Setze position relativ, um das Pseudo-Element zu positionieren
+    color: rgba(112, 230, 28, 1); // Textfarbe für den aktiven Link
+
+    // Pseudo-Element für die UnteUnterstreichung (nach Bedarf anpassen)
+      height: 3px; // Höhe der Unterstreichung
+      background-color: rgb(151, 71, 255); // Farbe der Unterstreichung
+    }
+  }
+}
+@mixin colored-text {
+  .white-text {
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 32px;
+  }
+
+  .purple-text {
+    color: rgb(151, 71, 255);
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 32px;
+  }
+}
+
+@mixin greenbutton {
+  border-radius: 10px;
+  background-color: rgba(112, 230, 28, 1);
+  border-style: none;
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 400px;
+  font-size: 23px;
+            
+    &:hover{
+      cursor: pointer;
+      background-color: rgba(151, 71, 255, 1);
+      transform: scale(1.1);
+      transition: all ease 125ms;
+    }
+}
+@mixin purbleline{
+    height: 3px;
+    background-color: rgba(151, 71, 255, 1);
+}
+
+
+/* poppins-100 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./assets/fonts/poppins-v21-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./assets/fonts/poppins-v21-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./assets/fonts/poppins-v21-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/poppins-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/poppins-v21-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/poppins-v21-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/poppins-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./assets/fonts/poppins-v21-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./assets/fonts/poppins-v21-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}

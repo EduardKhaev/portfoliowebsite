@@ -1,0 +1,103 @@
+@import '../../styles.scss';
+
+main {
+    margin-top:180px;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    gap: 105px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+    .myskillsleft {
+        width: 100%;
+        max-width: 464px;
+        height: 404px;
+        margin-left: 100px;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        gap: 88px;        
+        
+      
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;
+        width: 28px;
+        height: 40px;
+      }
+      
+      img {
+        height: 60px;
+        width: 54px;
+      }
+      
+      p {
+        @include p;
+        margin-top: 10px;  
+        font-size: 16px;
+      }
+    }
+    .myskillsright {
+        margin-right: 100px;
+        margin-bottom: 55px;
+        width: 571px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    
+        > .myskillstitle {
+            position: relative;
+            h1 {
+                @include h1;
+                font-size: 90px;
+            }
+            >.emptydiv{
+                @include purbleline;
+                position: absolute;
+                width: 68px;
+                right: -100px;
+                top: 70px
+
+            }
+        }
+        
+        > .myskillsbody {
+            span {
+                @include span;
+                display: flex;
+            
+            }
+            
+            > .styled-text {
+                @include colored-text;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center
+                
+            }
+            > span {
+                    text-align: end;
+            }
+            
+            
+            > .contactme {
+                @include span;
+                text-align: end;
+            }
+        }
+        >.getInTouchBtn{
+            @include greenbutton;
+            width: 200px;
+            height: 58px;
+            margin-top: 40px;
+
+        }
+    }
+}  
+  
+  

@@ -1,0 +1,32 @@
+
+@import '../../styles.scss';
+
+
+
+header{
+        height: 110px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+        >div {
+        margin-left: 100px;
+                >h2 {
+              color: white;
+              font-family: 'Poppins'; 
+            }
+          }
+        
+        
+}
+.navlinkcontainer{
+    width: 326px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 100px;
+            >a{
+             @include a;
+            }
+}

@@ -1,0 +1,74 @@
+@import '../../styles.scss';
+
+
+  
+main {
+    width: 100%;
+    display: flex;
+    gap: 170px;
+    align-items: center;
+    position: relative;
+    
+    >.aboutmeleft{
+        width: 471px;
+        margin-left: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        > .aboutmetittle {
+        
+            h1 {
+                @include h1;
+                font-size: 90px
+            }
+            span {
+                @include span;
+            }
+        }
+        >.aboutmebody{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            >.aboutmeinfo{
+                display: flex;
+                gap: 16px;
+                
+            }
+            
+            span {
+                @include span;
+        
+            }
+  
+      
+            img {
+                width: 30px;
+                height: 32px;
+            }
+        }
+    }
+    >.aboutmeright{
+        margin-right: 100px;
+        >.greenelipse{
+            >.greenline{
+            position: absolute;
+            top: 270px;
+            right: -1px;
+            width: 330px;
+            
+            }
+            >.greencircle{
+                position: absolute;
+                top: 50px;
+                right: 330px;
+            }
+            
+        }
+    }
+}
+.pruleshadowAM{
+    position: absolute;
+    top: -250px;
+    right: -400px;
+    z-index: -5;
+}
