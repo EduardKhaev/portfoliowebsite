@@ -1,32 +1,61 @@
+@import "../../styles.scss";
 
-@import '../../styles.scss';
+header {
+  height: 110px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  div {
+    margin-left: 100px;
+    position: relative;
+  
+    > h2 {
+      font-family: "Poppins";
+      font-size: 44px;
+      background: linear-gradient(
+        90deg,
+        rgb(175, 113, 255),
+        rgb(151, 71, 255),
+        rgb(175, 113, 255)
+      );
+      background-size: 2000%;
+      transform: skewX(-90deg);
+      animation: shine-name 1s forwards, slide-gradient-name 2s infinite forwards;
+      background-clip: text;
+      position: absolute;
+      top: -73px;
+      color: transparent;
+  
+      /* Animation für den Text-Slide */
+      @keyframes shine-name {
+        0% {
+          transform: translateX(-150%); /* Start weit links außerhalb des Bildschirms */
+        }
+        100% {
+          transform: translateX(0); /* Endposition */
+        }
+      }
+  
+      @keyframes slide-gradient-name {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 100% 50%;
+        }
+      }
+  }
+} 
 
-
-header{
-        height: 110px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        
-        
-        >div {
-        margin-left: 100px;
-                >h2 {
-              color: white;
-              font-family: 'Poppins'; 
-            }
-          }
-        
-        
-}
-.navlinkcontainer{
+  .navlinkcontainer {
     width: 326px;
     display: flex;
     justify-content: space-between;
     margin-right: 100px;
-            >a{
-             @include a;
-            }
+    > a {
+      @include a;
+    }
+  }
 }

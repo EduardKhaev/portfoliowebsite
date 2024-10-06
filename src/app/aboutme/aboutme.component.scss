@@ -10,7 +10,7 @@ main {
     position: relative;
     
     >.aboutmeleft{
-        width: 471px;
+        max-width: 471px;
         margin-left: 100px;
         display: flex;
         flex-direction: column;
@@ -42,25 +42,26 @@ main {
   
       
             img {
-                width: 30px;
-                height: 32px;
+                max-width: 30px;
+                max-height: 32px;
             }
         }
     }
     >.aboutmeright{
         margin-right: 100px;
         >.greenelipse{
+            max-width: 330px;
             >.greenline{
             position: absolute;
             top: 270px;
             right: -1px;
-            width: 330px;
+            
             
             }
             >.greencircle{
                 position: absolute;
                 top: 50px;
-                right: 330px;
+                right: 320px;
             }
             
         }

@@ -1,15 +1,17 @@
 @import '../../styles.scss';
 
-
+.portfoliomaincontainer{
 .scsstemplate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include portfolioTemplate;
+   
 }
-.scsstemplatereverse{
-    @include portfolioTemplateReverse;
 }
-.purblebackground{
-    position: absolute;
-    top: -280px;
-    left: -350px;
-    z-index: -5;
+.portfoliomaincontainer{
+    position: relative;
+    
 }
+
+

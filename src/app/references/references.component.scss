@@ -21,14 +21,7 @@ main {
         right: -550px;
         top: -610px;
     }
-    >.textFieldTicks{
-        max-height: 68px;
-        max-width: 96px;
-        position: absolute;
-        left: 70px;
-        top: -30px;
-
-    }
+    
     .referencecontainer {
         display: flex;
         flex-direction: column;
@@ -47,6 +40,16 @@ main {
                 flex-direction: column;
                 max-width: 851px;
                 max-height: 272px;
+                min-height: 271px;
+                position: relative;
+                >.textFieldTicks{
+                    max-height: 68px;
+                    max-width: 96px;
+                    position: absolute;
+                    left: -70px;
+                    top: -30px;
+            
+                }
                 span {
                     @include span;
                     padding: 48px 96px 112px;
@@ -75,6 +78,8 @@ main {
             }
             .pngCircle {
                 img {
+                    display: flex;
+                    justify-content: flex-end;
                     height: 272px;
                     width: 272px;
                     border-radius: 50%;

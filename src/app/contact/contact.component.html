@@ -14,20 +14,27 @@
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm ="ngForm">
                 
                 <label for="name"></label>
-                <input [(ngModel)]="contactData.name" type="text" id="email" name="name" placeholder="Your name" required>
+                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="email" name="name" placeholder="Your name" required>
+                @if (!name.valid && name.touched && !name.disabled) {
+                    <span class="formvalidationspan">Your name is required</span>
+                }
+
 
                 <label for="email"></label>
-                <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your mail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your mail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                @if (!email.valid && email.touched && !email.disabled) {
+                    <span class="formvalidationspan">Your email is required</span>
+                }
 
                 <label for="message"></label>
                 <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your name" style="width: 100%; height: 150px;" required></textarea>
                 @if (!message.valid && message.touched && !message.disabled) {
-                    <span>Please enter a message</span>
+                    <span class="formvalidationspan">Your message is emppty</span>
                 }
 
-
+                <div>
                 <div class="checkbox-container">
-                    <input type="checkbox" id="myCheckbox">
+                    <input #checkbox="ngModel" [(ngModel)]="contactData.email" type="checkbox" id="myCheckbox" name="checkbox">
                     <label for="myCheckbox">
                         I've read the 
                         <span class="purple-text">privacy policy</span>
@@ -35,11 +42,13 @@
                         of my data as outlined.
                     </label>
                 </div>
-
+                @if (!checkbox.valid && checkbox.touched && !checkbox.disabled) {
+                    <span class="formvalidationspan">Please accept the privacy policy</span>
+                }
                 
 
-                <input type="submit" value="Submit {{smiley}}">
-
+                <input type="submit" value="Send message {{smiley}}">
+                </div>
                 
                 
             </form>

@@ -1,36 +1,36 @@
-body{
-    margin: 0;
-    background-color: rgba(20, 29, 47, 1);
-    z-index: -10;    
-    overflow-x: hidden;
-    box-sizing: border-box;
+body {
+  margin: 0;
+  background-color: rgba(20, 29, 47, 1);
+  z-index: -10;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
-  
 }
 
-
-
-@mixin h1 { //Section Titles 
-  font-family: 'Poppins';
+@mixin h1 {
+  //Section Titles
+  font-family: "Poppins";
   color: white;
   font-weight: 700;
   margin: 0;
 }
-@mixin h3{ //Section Portfolio
-  font-family: 'Poppins';
+@mixin h3 {
+  //Section Portfolio
+  font-family: "Poppins";
   color: #9747ff;
   margin: 0;
   font-weight: 700;
 }
-@mixin span{ //Bodytext
-  font-family: 'Poppins';
+@mixin span {
+  //Bodytext
+  font-family: "Poppins";
   color: white;
   font-weight: 400;
 }
 @mixin p {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   color: white;
   font-weight: 700;
   font-size: 16px;
@@ -41,7 +41,7 @@ html {
   text-decoration: none;
   color: white;
   font-size: 23px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 
   &:hover {
     cursor: pointer;
@@ -50,10 +50,10 @@ html {
 
   &.active {
     color: rgba(112, 230, 28, 1);
-    position: relative; 
+    position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: -4px;
@@ -67,14 +67,14 @@ html {
 @mixin colored-text {
   .white-text {
     color: white;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 700;
     font-size: 32px;
   }
 
   .purple-text {
     color: rgb(151, 71, 255);
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 700;
     font-size: 32px;
     margin: 0;
@@ -84,30 +84,30 @@ html {
 @mixin colored-text-checkbox {
   .white-text {
     color: white;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 700;
     font-size: 8px;
   }
 
   .purple-text {
     color: rgb(151, 71, 255);
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 700;
     font-size: 14px;
     margin: 0;
   }
 }
 
-@mixin purbletext{
+@mixin purbletext {
   color: #9747ff;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 700;
   font-size: 32px;
   margin: 0;
 }
-@mixin greentext{
+@mixin greentext {
   color: #70e61c;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 400;
   font-size: 23px;
   margin: 0;
@@ -118,39 +118,39 @@ html {
   background-color: #70e61c;
   border-style: none;
   color: white;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 400px;
   font-size: 23px;
-            
-    &:hover{
-      cursor: pointer;
-      background-color: rgba(151, 71, 255, 1);
-      transform: scale(1.1);
-      transition: all ease 125ms;
-    }
-}
-@mixin purbleline{
-    height: 3px;
+
+  &:hover {
+    cursor: pointer;
     background-color: rgba(151, 71, 255, 1);
+    transform: scale(1.1);
+    transition: all ease 125ms;
+  }
+}
+@mixin purbleline {
+  height: 3px;
+  background-color: rgba(151, 71, 255, 1);
 }
 
-@mixin liveTestBtn{
+@mixin liveTestBtn {
   color: white;
   background-color: #9747ff;
   border-radius: 10px;
   width: 152px;
   height: 58px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 400;
   font-size: 23px;
   outline: none;
-    &:hover{
-      cursor: pointer;
-      background-color: #70e61c;
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: #70e61c;
+  }
 }
 
-@mixin gitHubBtn{
+@mixin gitHubBtn {
   color: white;
   border-color: #70e61c;
   border-radius: 10px;
@@ -160,224 +160,263 @@ html {
   height: 58px;
   border-width: 1px;
   border-style: solid;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 400;
   font-size: 23px;
-    &:hover{
-      cursor: pointer;
-      background-color: #70e61c;
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: #70e61c;
+  }
 }
 
-@mixin ContactButton{
+@mixin contactButton {
   border-radius: 10px;
-  font-size: 23px;
+  font-size: 16px;
   font-weight: 400;
-  font-family: 'Poppins';
-
+  font-family: "Poppins";
+  background: rgba(182, 182, 182, 1);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  max-width: 195px;
+  margin-top: 16px;
 }
 
-@mixin inputDesign{
-  
+@mixin inputDesign {
   background-color: transparent;
   border: 1px solid #9747ff;
   color: white;
-  padding: 10px;
+  padding: 12px;
+  width: 100%;
   font-size: 16px;
   border-radius: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+  margin-bottom: 8px;
   outline: none;
-                    
+
   &:hover {
-      border-color: #70e61c;
+    border-color: #70e61c;
   }
-  &::placeholder{
+  &::placeholder {
     color: white;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-weight: 400;
     font-size: 16px;
   }
 }
+.purblebackground{
+  position: absolute;
+ background-image: url(./assets/img/purbleshadowportfolio.png);
+  top: 500px;
+  left: -400px;
+  z-index: -5;
+}
 
+@mixin portfolioTemplate {
+  .portfoliomaincontainer {
+    > .scsstemplate {
+      main {
+        margin-left: 100px;
+        position: relative;
 
+        > .projecttemplate-reverse {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          justify-content: center;
+          margin-right: 100px;
+          max-width: 600px;
+          gap: 100px;
+          > .rightsidePT {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 15px;
 
-@mixin portfolioTemplate{
-  main{
-    margin-left: 100px;
-    position: relative;
-    
-    
-    >.projecttemplate{
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        margin-right: 100px;
-        gap: 100px;
-            >.leftsidePT{
-              
+            > h2 {
+              @include purbletext;
             }
-            >.rightsidePT{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                gap: 15px;
-                width: 513px;
-                >h2{
-                    @include purbletext;
-                }
-                >h3{
-                    @include greentext;
-                }
-                >span{
-                    @include span;
-                }
-                >.ButtonsPT{
-                    margin-top: 35px;
-                    gap: 86px;
-                    display: flex;
-                    >.LTBtn{
-                        @include liveTestBtn;
-                    }
-                    >.GHBtn{
-                        @include gitHubBtn;
-                    }
-                    
-                }
+            > h3 {
+              @include greentext;
             }
-            
+            > span {
+              @include span;
+            }
+            > .ButtonsPT {
+              margin-top: 35px;
+              gap: 86px;
+              display: flex;
+              > .LTBtn {
+                @include liveTestBtn;
+              }
+              > .GHBtn {
+                @include gitHubBtn;
+              }
+            }
+          }
+        }
+        > .projecttemplate {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 100px;
+          max-width: 600px;
+          gap: 100px;
+
+          > .rightsidePT {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 15px;
+            max-width: 513px;
+            > h2 {
+              @include purbletext;
+            }
+            > h3 {
+              @include greentext;
+            }
+            > span {
+              @include span;
+            }
+            > .ButtonsPT {
+              margin-top: 35px;
+              gap: 86px;
+              display: flex;
+              > .LTBtn {
+                @include liveTestBtn;
+              }
+              > .GHBtn {
+                @include gitHubBtn;
+              }
+            }
+          }
+        }
+      }
     }
-}
+  }
 }
 
-@mixin portfolioTemplateReverse{
-  main{
+@mixin portfolioTemplateReverse {
+  main {
     margin-left: 100px;
-    
-    
-    >.projecttemplate{
+
+    > .projecttemplate {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: flex-end;
+      margin-right: 100px;
+
+      gap: 100px;
+      > .leftsidePT {
+      }
+      > .rightsidePT {
         display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: flex-end;
-        margin-right: 100px;
-        gap: 100px;
-            >.leftsidePT{
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        gap: 15px;
 
-            }
-            >.rightsidePT{
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                justify-content: center;
-                gap: 15px;
-                width: 513px;
-                >h2{
-                    @include purbletext;
-                }
-                >h3{
-                    @include greentext;
-                }
-                >span{
-                    @include span;
-                    text-align: end;
-                }
-                >.ButtonsPT{
-                    margin-top: 35px;
-                    gap: 86px;
-                    display: flex;
-                    >.LTBtn{
-                        @include liveTestBtn;
-                    }
-                    >.GHBtn{
-                        @include gitHubBtn;
-                    }
-                    
-                }
-            }
-            
+        > h2 {
+          @include purbletext;
+        }
+        > h3 {
+          @include greentext;
+        }
+        > span {
+          @include span;
+          text-align: end;
+        }
+        > .ButtonsPT {
+          margin-top: 35px;
+          gap: 86px;
+          display: flex;
+          > .LTBtn {
+            @include liveTestBtn;
+          }
+          > .GHBtn {
+            @include gitHubBtn;
+          }
+        }
+      }
     }
+  }
 }
-}
-
-
-
-
-
-
-
-
-
-
 
 /* poppins-100 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 100;
-  src: url('./assets/fonts/poppins-v21-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/poppins-v21-latin-100.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-200 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 200;
-  src: url('./assets/fonts/poppins-v21-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/poppins-v21-latin-200.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-300 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 300;
-  src: url('./assets/fonts/poppins-v21-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/poppins-v21-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  src: url('./assets/fonts/poppins-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/poppins-v21-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-500 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  src: url('./assets/fonts/poppins-v21-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/poppins-v21-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-600 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-  src: url('./assets/fonts/poppins-v21-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/poppins-v21-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-700 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  src: url('./assets/fonts/poppins-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/poppins-v21-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-800 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 800;
-  src: url('./assets/fonts/poppins-v21-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/poppins-v21-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 /* poppins-900 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 900;
-  src: url('./assets/fonts/poppins-v21-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./assets/fonts/poppins-v21-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
