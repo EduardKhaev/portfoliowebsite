@@ -1,1 +1,40 @@
-<p>contact works!</p>
+<main>
+    <div class="contactcotainer">   
+        <div class="contactbody">
+            <div class="leftbody">
+                <h2>Got a problem to solve?</h2>
+                <span class="spanOne">
+                    Contact me through this form, I am interested in hearing from you, 
+                    knowing your ideas and contributing to your projects with my work.
+                </span>
+                <span class="spanTwo">
+                    Need a Frontend developer? <b>Contact me!</b>
+                </span>
+            </div>
+            <div class="rightbody">
+                <div class="input-container">
+                    <input type="text" id="name" placeholder="Your name" required>
+                    <span class="error-message" id="name-error">Your name is required</span>
+                </div>
+                <div class="input-container">
+                    <input type="email" id="email" placeholder="Your email" required>
+                    <span class="error-message" id="email-error">Your email is required</span>
+                </div>
+                <div class="input-container">
+                    <textarea id="message" placeholder="Your message" required style="resize: both; width: 100%; height: 150px;"></textarea>
+                    <span class="error-message" id="message-error">Your message is required</span>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="myCheckbox">
+                    <label for="myCheckbox">
+                        I've read the 
+                        <span class="purple-text">privacy policy</span>
+                        and agree to the processing 
+                        of my data as outlined.
+                    </label>
+                </div>
+                <button class="ContactBtn" (click)="validateForm($event)">Send message {{smiley}}</button>
+            </div>
+        </div>
+    </div>
+</main>

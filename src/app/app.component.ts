@@ -8,7 +8,9 @@ import { RouterOutlet } from '@angular/router';
 import { PortfolioComponent } from "./portfolio/portfolio.component";
 import { PortfolioHeaderComponent } from "./portfolio-header/portfolio-header.component";
 import { ReferencesComponent } from "./references/references.component";
+import { ContactHeaderComponent } from "./contact-header/contact-header.component";
 import { ContactComponent } from "./contact/contact.component";
+
 
 
 
@@ -23,9 +25,9 @@ import { ContactComponent } from "./contact/contact.component";
     MyskillsComponent,
     PortfolioComponent,
     PortfolioHeaderComponent,
-    ReferencesComponent, 
-    ContactComponent
-  ],
+    ReferencesComponent,
+    ContactHeaderComponent,
+    ContactComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

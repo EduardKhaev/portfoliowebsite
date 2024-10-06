@@ -1,1 +1,115 @@
 @import '../../styles.scss';
+
+main {
+    margin-top: 40px;
+    height: 50vh;
+
+    > .contactcotainer {
+        display: flex;
+        margin-left: 100px;
+        margin-right: 100px;
+
+        > .contactbody {
+            display: flex;
+            gap: 149px;
+
+            > .leftbody {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                max-width: 474px;
+
+                > h2 {
+                    @include h1;
+                    font-size: 32px;
+                    margin-bottom: 24px;
+                }
+
+                > .spanOne {
+                    @include span;
+                    margin-bottom: 16px;
+                }
+
+                > .spanTwo {
+                    @include span;
+                }
+            }
+
+            > .rightbody {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                max-width: 617px;
+                gap: 32px;
+
+                
+                > .input-container {
+                    width: 100%;
+                    position: relative;
+                
+                    &.error input {
+                        border: 2px solid red; 
+                    }
+                
+                    > input[type="text"],
+                    > input[type="email"],
+                    > textarea {
+                        @include inputDesign; 
+                        border: 2px solid #9747ff; 
+                        width: 100%; 
+                
+                        &::placeholder {
+                            color: white;
+                            font-family: 'Poppins';
+                            font-weight: 400;
+                            font-size: 16px;
+                        }
+                        
+                        
+                    }
+                }
+                
+                .checkbox-container {
+                    display: flex;
+
+                    input[type="checkbox"] {
+                        appearance: none;
+                        width: 18px;
+                        height: 18px;
+                        border: 2px solid #70e61c; 
+                        background-color: transparent; 
+                        cursor: pointer; 
+                        position: relative; 
+                        
+                        &:checked::after {
+                            content: '';
+                            position: absolute;
+                            left: 6px;
+                            top: 0px;
+                            width: 3px;
+                            height: 10px;
+                            border: solid #70e61c;
+                            border-width: 0 2px 2px 0;
+                            transform: rotate(45deg);
+                        }
+                    }
+                    
+                    > label {
+                        @include span;
+                        font-size: 14px;
+                        @include colored-text-checkbox;
+                    }
+                }
+
+                > .ContactBtn {
+                    @include ContactButton;
+                    max-width: 253px;
+                    max-height: 65px;
+                    padding: 15px 30px;
+                    text-wrap: nowrap;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

@@ -80,6 +80,24 @@ html {
     margin: 0;
   }
 }
+
+@mixin colored-text-checkbox {
+  .white-text {
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 8px;
+  }
+
+  .purple-text {
+    color: rgb(151, 71, 255);
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0;
+  }
+}
+
 @mixin purbletext{
   color: #9747ff;
   font-family: 'Poppins';
@@ -150,6 +168,36 @@ html {
       background-color: #70e61c;
     }
 }
+
+@mixin ContactButton{
+  border-radius: 10px;
+  font-size: 23px;
+  font-weight: 400;
+  font-family: 'Poppins';
+
+}
+
+@mixin inputDesign{
+  
+  background-color: transparent;
+  border: 1px solid #9747ff;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  outline: none;
+                    
+  &:hover {
+      border-color: #70e61c;
+  }
+  &::placeholder{
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
 
 
 @mixin portfolioTemplate{
