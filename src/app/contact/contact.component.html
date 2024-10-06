@@ -11,19 +11,21 @@
                     Need a Frontend developer? <b>Contact me!</b>
                 </span>
             </div>
-            <div class="rightbody">
-                <div class="input-container">
-                    <input type="text" id="name" placeholder="Your name" required>
-                    <span class="error-message" id="name-error">Your name is required</span>
-                </div>
-                <div class="input-container">
-                    <input type="email" id="email" placeholder="Your email" required>
-                    <span class="error-message" id="email-error">Your email is required</span>
-                </div>
-                <div class="input-container">
-                    <textarea id="message" placeholder="Your message" required style="resize: both; width: 100%; height: 150px;"></textarea>
-                    <span class="error-message" id="message-error">Your message is required</span>
-                </div>
+            <form (ngSubmit)="onSubmit(contactForm)" #contactForm ="ngForm">
+                
+                <label for="name"></label>
+                <input [(ngModel)]="contactData.name" type="text" id="email" name="name" placeholder="Your name" required>
+
+                <label for="email"></label>
+                <input [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your mail" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+
+                <label for="message"></label>
+                <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your name" style="width: 100%; height: 150px;" required></textarea>
+                @if (!message.valid && message.touched && !message.disabled) {
+                    <span>Please enter a message</span>
+                }
+
+
                 <div class="checkbox-container">
                     <input type="checkbox" id="myCheckbox">
                     <label for="myCheckbox">
@@ -33,8 +35,14 @@
                         of my data as outlined.
                     </label>
                 </div>
-                <button class="ContactBtn" (click)="validateForm($event)">Send message {{smiley}}</button>
-            </div>
+
+                
+
+                <input type="submit" value="Submit {{smiley}}">
+
+                
+                
+            </form>
         </div>
     </div>
 </main>
