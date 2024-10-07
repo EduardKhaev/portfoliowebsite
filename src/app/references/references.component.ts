@@ -1,10 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-references',
   standalone: true, // Stelle sicher, dass dies hier gesetzt ist
   templateUrl: './references.component.html',
-  styleUrls: ['./references.component.scss']
+  styleUrls: ['./references.component.scss'],
+  imports: [ CommonModule ]
 })
 export class ReferencesComponent implements AfterViewInit {
   @ViewChild('backarrow', { static: false }) backarrow!: ElementRef;
@@ -16,6 +18,28 @@ export class ReferencesComponent implements AfterViewInit {
     'assets/img/slideelements/elipsegreen.png',
     'assets/img/slideelements/elipsepurble.png',
     'assets/img/slideelements/elipsepurble.png'
+  ];
+
+  references = [
+    {
+      text: `Michael really kept the team together with his great organization and
+             clear communication. We wouldn't have got this far without his
+             commitment.`,
+      userName: 'Team Partner, Lisa Mustermann',
+      img: '../../assets/img/business-attire-women.jpg'
+    },
+    {
+      text: `Patrick's leadership skills are amazing. He guided the team through
+             complex challenges and always stayed calm and focused.`,
+      userName: 'Team Partner, John Doe',
+      img: 'assets/img/business-attire-men.jpg'
+    },
+    {
+      text: `Galina's dedication to solving difficult tasks made a huge impact on
+             our project's success.`,
+      userName: 'Team Partner, Sarah Example',
+      img: 'assets/img/business-attire-women-2.jpg'
+    }
   ];
 
   ngAfterViewInit() {

@@ -1,38 +1,45 @@
 <main>
-    <div class="emptydiv1"></div>
-    <img class="referenceshadowgreen" src="../../assets/img/greenshadowreference.png" alt="">
-    
-    <div class="referencecontainer">
-        
-        <div class="textAndPng">
-            <div class="textField">
-                <img class="textFieldTicks" src="../../assets/img/referenceticks.png" alt="">
-                <span>
-                    Michael really kept the team together 
-                    with his great organization and clear communication. 
-                    We wouldn't have got this far without his commitment.
-                </span>
-                <div>
-                    <div class="emptydiv"></div>
-                    <div class="userName">Team Partner, Lisa Mustermann</div>
-                </div>
-            </div>
-            <div class="pngCircle">
-                <img src="../../assets/img/business-attire-women.jpg" alt="">
-            </div>
+  <div class="emptydiv1"></div>
+  <img
+    class="referenceshadowgreen"
+    src="../../assets/img/greenshadowreference.png"
+    alt=""
+  />
+ <img src="" alt="">
+ <div class="referencecontainer">
+    <div class="textAndPng">
+      <div class="textField">
+        <img class="textFieldTicks" src="../../assets/img/referenceticks.png" alt="" />
+        <span>{{ references[currentIndex].text }}</span>
+        <div>
+          <div class="emptydiv"></div>
+          <div class="userName">{{ references[currentIndex].userName }}</div>
         </div>
-        <div class="slideSeciton">
-            <div class="backarrow" #backarrow>
-                <img class="backarrow-img" src="../../assets/img/slideelements/arrowback.png" alt="">
-            </div>
-            <div class="elipses">
-                <img src="{{ ellipsesImages[(currentIndex)%3]}}" alt="">
-                <img src="{{ ellipsesImages[(currentIndex+1)%3]}}" alt="">
-                <img src="{{ ellipsesImages[(currentIndex+2)%3]}}" alt="">
-            </div>
-            <div class="forwardarrow" #forwardarrow>
-                <img class="forwardarrow-img" src="../../assets/img/slideelements/arrowforward.png" alt="">
-            </div>
-        </div>
+      </div>
+      <div class="pngCircle">
+        <img [src]="references[currentIndex].img" alt="" />
+      </div>
     </div>
+    <div class="slideSeciton">
+      <div class="backarrow" #backarrow>
+        <img
+          class="backarrow-img"
+          src="../../assets/img/slideelements/arrowback.png"
+          alt=""
+        />
+      </div>
+      <div class="elipses">
+        <img src="{{ ellipsesImages[currentIndex % 3] }}" alt="" />
+        <img src="{{ ellipsesImages[(currentIndex + 1) % 3] }}" alt="" />
+        <img src="{{ ellipsesImages[(currentIndex + 2) % 3] }}" alt="" />
+      </div>
+      <div class="forwardarrow" #forwardarrow>
+        <img
+          class="forwardarrow-img"
+          src="../../assets/img/slideelements/arrowforward.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
 </main>
