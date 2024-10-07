@@ -1,118 +1,115 @@
-@import '../../styles.scss';    
+@import "../../styles.scss";
 
 main {
-    margin-left: 100px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  > .emptydiv1 {
+    @include purbleline;
+    position: absolute;
+    right: 0;
+    top: 130px;
+    width: 100px;
+  }
+  > .referenceshadowgreen {
+    z-index: -5;
+    position: absolute;
+    transform: rotate(80deg);
+    right: -550px;
+    top: -610px;
+  }
+
+  .referencecontainer {
     display: flex;
-    justify-content: flex-end;
-    position: relative;
-    >.emptydiv1{
-        @include purbleline;
-        position: absolute;
-        right: 0;
-        top: 130px;
-        width: 100px;
-    }
-    >.referenceshadowgreen{
-        z-index: -5;
-        position: absolute;
-        transform: rotate(80deg);
-        right: -550px;
-        top: -610px;
-    }
-    
-    .referencecontainer {
+    flex-direction: column;
+    align-items: center;
+    .textAndPng {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 100px;
+      gap: 48px;
+      .textField {
+        border-style: solid;
+        border-radius: 32px;
+        border-width: 4px;
+        border-color: #70e61c;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        .textAndPng {
-            display: flex;
-            justify-content: flex-end;
-            margin-right: 100px;
-            gap: 48px;
-            .textField {
-                border-style: solid;
-                border-radius: 32px;
-                border-width: 4px;
-                border-color: #70e61c;
-                display: flex;
-                flex-direction: column;
-                max-width: 851px;
-                max-height: 272px;
-                min-height: 271px;
-                position: relative;
-                >.textFieldTicks{
-                    max-height: 68px;
-                    max-width: 96px;
-                    position: absolute;
-                    left: -70px;
-                    top: -30px;
-            
-                }
-                span {
-                    @include span;
-                    padding: 48px 96px 112px;
-                    
-
-                }
-                >div{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 16px;
-                    margin-left: 96px;
-                    margin-right: 96px;
-                    margin-bottom: 46px;
-                    >.emptydiv{
-                        @include purbleline;
-                        display: flex;
-                        justify-content: space-around;
-                         width: 100%;
-                    }
-                    >.userName{
-                        @include span;
-                        text-wrap: nowrap;
-                    }
-                }
-            }
-            .pngCircle {
-                img {
-                    display: flex;
-                    justify-content: flex-end;
-                    height: 272px;
-                    width: 272px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    border-style: solid;
-                    border-width: 4px;
-                    border-color: #9747ff;
-                    
-                }
-            }
+        max-width: 851px;
+        max-height: 272px;
+        min-height: 271px;
+        position: relative;
+        > .textFieldTicks {
+          max-height: 68px;
+          max-width: 96px;
+          position: absolute;
+          left: -70px;
+          top: -30px;
         }
-        .slideSeciton {
-            display: flex;
-            margin-top: 32px;
-                >.backarrow{
-                    height: 40px;
-                    width: 40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                >.forwardarrow{
-                    height: 40px;
-                    width: 40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-                >.elipses{
-                    height: 40px;
-                    width: 40px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                }
+        span {
+          @include span;
+          padding: 48px 96px 112px;
         }
+        > div {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 16px;
+          margin-left: 96px;
+          margin-right: 96px;
+          margin-bottom: 46px;
+          > .emptydiv {
+            @include purbleline;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+          }
+          > .userName {
+            @include span;
+            text-wrap: nowrap;
+          }
+        }
+      }
+      .pngCircle {
+        img {
+          display: flex;
+          justify-content: flex-end;
+          height: 272px;
+          width: 272px;
+          border-radius: 50%;
+          object-fit: cover;
+          border-style: solid;
+          border-width: 4px;
+          border-color: #9747ff;
+        }
+      }
     }
+    .slideSeciton {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+      margin-top: 32px;
+      .backarrow, .forwardarrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 40px;
+      
+        img {
+          height: 30px;
+          width: 30px;
+        }
+      }
+      > .elipses {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
 }

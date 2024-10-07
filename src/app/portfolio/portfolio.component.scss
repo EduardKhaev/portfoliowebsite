@@ -13,7 +13,32 @@ main {
 
   .portfolioleft {
   }
+  .portfoliorightreverse{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    >.h2reverse {
+      text-align: end;
+    }
 
+    >.h3reverse {
+      text-align: end;
+    }
+
+    >.spanreverse {
+      text-align: end
+    }
+
+    >.divreverse {
+      
+      .Btnprimary {
+        @include liveTestBtn;
+      }
+      .Btnsecondary {
+        @include gitHubBtn;
+      }
+    }
+  }
   .portfolioright {
     max-width: 513px;
     h2 {

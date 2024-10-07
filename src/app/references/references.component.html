@@ -22,16 +22,16 @@
             </div>
         </div>
         <div class="slideSeciton">
-            <div class="backarrow">
-                <img src="../../assets/img/slideelements/arrowback.png" alt="">
+            <div class="backarrow" #backarrow>
+                <img class="backarrow-img" src="../../assets/img/slideelements/arrowback.png" alt="">
             </div>
             <div class="elipses">
-                <img src="../../assets/img/slideelements/elipsegreen.png" alt="">
-                <img src="../../assets/img/slideelements/elipsepurble.png" alt="">
-                <img src="../../assets/img/slideelements/elipsepurble.png" alt="">
+                <img src="{{ ellipsesImages[(currentIndex)%3]}}" alt="">
+                <img src="{{ ellipsesImages[(currentIndex+1)%3]}}" alt="">
+                <img src="{{ ellipsesImages[(currentIndex+2)%3]}}" alt="">
             </div>
-            <div class="forwardarrow">
-                <img src="../../assets/img/slideelements/arrowforward.png" alt="">
+            <div class="forwardarrow" #forwardarrow>
+                <img class="forwardarrow-img" src="../../assets/img/slideelements/arrowforward.png" alt="">
             </div>
         </div>
     </div>

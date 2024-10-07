@@ -29,8 +29,7 @@ import { FooterComponent } from "./footer/footer.component";
     ReferencesComponent,
     ContactHeaderComponent,
     ContactComponent, 
-    FooterComponent
-  ],
+    FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

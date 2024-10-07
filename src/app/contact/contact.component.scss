@@ -2,20 +2,21 @@
 
 main {
     margin-top: 40px;
-    height: 50vh;
+    margin-bottom: 180px;
     position: relative;
-    >.shadowcontact{
+    
+    >.shadowcontacts{
         position: absolute;
+        top: 130px;
         left: 0;
-        bottom: -350px;
-        z-index: -5px;
+        z-index: -5;
     }
-
     > .contactcotainer {
         display: flex;
         justify-content: center;
         margin-left: 100px;
         margin-right: 100px;
+        
 
         > .contactbody {
             display: flex;

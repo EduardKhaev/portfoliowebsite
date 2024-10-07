@@ -1,14 +1,15 @@
 @import "../../styles.scss";
 
 main {
-  margin-top: 180px;
+  padding-top: 180px;
   margin-left: 100px;
+  margin-bottom: 180px;
   display: flex;
   justify-content: space-between;
 
   >.greenshadowms {
     position: absolute;
-    top: 2300px;
+    top: 2400px;
     left: -580px;
     
   }

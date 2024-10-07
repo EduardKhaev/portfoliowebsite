@@ -1,9 +1,11 @@
 @import "../../styles.scss";
 
 main {
-    margin-left: 100px;
+    
+    margin-left: 150px;
     position: relative;
   .flexaboutme {
+    padding-top: 100px;
     display: flex;
     justify-content: space-between;
     .aboutmeleft {
@@ -29,6 +31,11 @@ main {
           img {
             max-width: 48px;
             max-height: 48px;
+            &:hover{
+              cursor: pointer;
+              scale: 1.3;
+              transition: all 125ms ease;
+            }
           }
           
         }

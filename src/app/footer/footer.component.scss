@@ -1,24 +1,32 @@
 @import "../../styles.scss";
 
 main {
-  margin-top: 180px;
-  width: calc(100% - 0px); /* Optional, um die Breite anzupassen */
-  height: 291px;
+    
+  width: calc(100% - 0px);
+  height: 40vh;
   border-top: 4px solid rgba(112, 230, 28, 1);
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  background: rgba(20, 29, 47, 1);
 
   > .foocontainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    
     margin: 0px 100px;
     > .firstfoo {
       > h1 {
         @include h1;
         margin: 0;
+        >.highlight1{
+            color: #9747ff;
+        }
+        >.highlight2{
+            color: #70e61c;
+        }
       }
       > span {
         @include span;
