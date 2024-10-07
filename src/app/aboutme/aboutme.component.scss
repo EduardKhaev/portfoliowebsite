@@ -1,75 +1,50 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
-
-  
 main {
-    width: 100%;
-    display: flex;
-    gap: 170px;
-    align-items: center;
+    margin-left: 100px;
     position: relative;
-    
-    >.aboutmeleft{
+  .flexaboutme {
+    display: flex;
+    justify-content: space-between;
+    .aboutmeleft {
         max-width: 471px;
-        margin-left: 100px;
+      h1 {
+        @include h1;
+        font-size: 90px;
+        margin-bottom: 40px
+      }
+      span {
+        @include span;
+        
+      }
+      > div {
+        margin-top: 32px;
         display: flex;
         flex-direction: column;
-        gap: 32px;
-        > .aboutmetittle {
-        
-            h1 {
-                @include h1;
-                font-size: 90px
-            }
-            span {
-                @include span;
-            }
-        }
-        >.aboutmebody{
+        gap: 24px;
+        > div {
             display: flex;
-            flex-direction: column;
-            gap: 24px;
-            >.aboutmeinfo{
-                display: flex;
-                gap: 16px;
-                
-            }
-            
-            span {
-                @include span;
-        
-            }
-  
-      
-            img {
-                max-width: 30px;
-                max-height: 32px;
-            }
+            align-items: start;
+            gap: 16px;
+          img {
+            max-width: 48px;
+            max-height: 48px;
+          }
+          
         }
+      }
     }
-    >.aboutmeright{
-        margin-right: 100px;
-        >.greenelipse{
-            max-width: 330px;
-            >.greenline{
-            position: absolute;
-            top: 270px;
-            right: -1px;
-            
-            
-            }
-            >.greencircle{
-                position: absolute;
-                top: 50px;
-                right: 320px;
-            }
-            
-        }
+    .cirlce {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
-}
-.pruleshadowAM{
+  }
+  .abshadow{
     position: absolute;
-    top: -250px;
     right: -400px;
+    top: -250px;
     z-index: -5;
+    
+}
 }

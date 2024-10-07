@@ -1,28 +1,78 @@
 <main>
-    <div class="myskillsleft">
-        <div *ngFor="let skill of myskills; let last = last" class="skill-item" [ngClass]="{'no-hover': last}">
-            <img [src]="skill.imgSrc" [alt]="skill.name">
-            <p>{{ skill.name }}</p>
-            <span class="hover-message" *ngIf="last"><img src="../../assets/img/myskills/specialinterest.png" alt=""></span>
-        </div>
+  <img class="greenshadowms" src="../../assets/img/greenshadowmyskills.png" alt="">
+  <div class="myskillleft">
+    <div class="container">
+      <div class="item">
+        <img src="../../assets/img/myskills/html.png" alt="" />
+        <p>HTML</p>
+      </div>
+      <div class="item">
+        <img src="../../assets/img/myskills/css.png" alt="" />
+        <p>CSS</p>
+      </div>
+      <div class="item">
+        <img src="../../assets/img/myskills/javascript.png" alt="" />
+        <p>Javascript</p>
+      </div>
+      <div class="item">
+        <img src="../../assets/img/myskills/typescript.png" alt="" />
+        <p>Typescript</p>
+      </div>
+      <div class="item">
+        <img src="../../assets/img/myskills/angular.png" alt="" />
+        <p>Angular</p>
+      </div>
+      <div class="item">
+        <img src="../../assets/img/myskills/firebase.png" alt="" />
+        <p>Firebase</p>
+      </div>
+      <div class="item">
+        <img src="../../assets/img/myskills/git.png" alt="" />
+        <p>GIT</p>
+        7
+      </div>
+      <div class="item">
+        <img src="../../assets/img/myskills/api.png" alt="" />
+        <p>Rest-API</p>
+      </div>
+      <div class="item">
+        <img src="../../assets/img/myskills/scrum.png" alt="" />
+        <p>Scrum</p>
+      </div>
+      <div class="item">
+        <img src="../../assets/img/myskills/materialdesign.png" alt="" />
+        <p>Material Design</p>
+      </div>
+      <div class="item" #lastskill>
+        <img #lastSkillImg src="../../assets/img/myskills/continuallylearning1.png" alt="" />
+        <p #lastSkillText style="color: #9747ff;">Continually learning</p>
+      </div>
     </div>
-
-    <div class="myskillsright">
-        <img src="../../assets/img/greenshadowmyskills.png" alt="">
-        <div class="myskillstitle">
-            <h1>My skills</h1>
-            <div class="emptydiv"></div>
-        </div>
-        <div class="myskillsbody">
-            <span>I have gained experience in building projects with different frontend technologies and concepts.</span>
-            <p class="styled-text"> 
-                <span class="white-text">Looking for </span>
-                <span>&nbsp;</span>
-                <span class="purple-text">another skill</span>
-                <span class="white-text">?</span>
-            </p>
-            <span class="contactme">Feel free to contact me. I look forward to expanding on my previous knowledge.</span>
-        </div>
-        <button class="getInTouchBtn">Get in Touch</button>
+    <div class="hover-image" #hoverImage style="display: none;">
+        <img src="../../assets/img/myskills/specialinterest.png" alt="Hover Image" />
+      </div>
+  </div>
+  <div class="myskillright">
+    <div>
+      <div class="myskillstitle"><h1>My skills</h1></div>
+      <div class="emptydiv"></div>
     </div>
+    <div class="myskillbody">
+      <span
+        >I have gained experience in building projects with different frontend
+        technologies and concepts.</span
+      >
+      <p>
+        Looking for
+        <span class="color-text">another skill</span>
+        ?
+      </p>
+      <span
+        >Feel free to contact me. I look forward to expanding on my previous
+        knowledge.</span
+      >
+      <button>Get in touch</button>
+    </div>
+  </div>
+  
 </main>

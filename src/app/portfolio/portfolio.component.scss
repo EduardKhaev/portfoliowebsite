@@ -1,17 +1,45 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
-.portfoliomaincontainer{
-.scsstemplate{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include portfolioTemplate;
-   
-}
-}
-.portfoliomaincontainer{
-    position: relative;
-    
+main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  >.purbleshadow{
+    position: absolute;
+    top: 1050px;
+    left: -350px;
 }
 
+  .portfolioleft {
+  }
 
+  .portfolioright {
+    max-width: 513px;
+    h2 {
+      @include purbletext;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      @include greentext;
+      margin-bottom: 15px;
+    }
+
+    span {
+      @include span;
+    }
+
+    div {
+      margin-top: 35px;
+      display: flex;
+      gap: 86px;
+      .Btnprimary {
+        @include liveTestBtn;
+      }
+      .Btnsecondary {
+        @include gitHubBtn;
+      }
+    }
+  }
+}

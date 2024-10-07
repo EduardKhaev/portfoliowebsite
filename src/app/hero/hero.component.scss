@@ -95,6 +95,11 @@ main{
                 >img{
                     height: 30px;
                     width: 30px;
+                    &:hover{
+                        cursor: pointer;
+                        scale: 1.3;
+                        transition: all ease 125ms;
+                    }
                 }
             }
             >.emptydiv{
@@ -117,16 +122,18 @@ main{
 }
 .herobackground{
     width: 100%;
+    
+    height: 100vh;
     position: absolute;
     right: 0;
-    top: 60px;
+    top: 150px;
     z-index: -5;
 }
 .coloredbackground{
     position: absolute;
-    top: -120px;
-    left: -30px;
-    width: 900px;
+    top: -150px;
+    left: 150px;
+  
     z-index: -6;
 }
 .scrolldown{

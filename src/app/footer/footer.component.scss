@@ -1,0 +1,41 @@
+@import "../../styles.scss";
+
+main {
+  margin-top: 180px;
+  width: calc(100% - 0px); /* Optional, um die Breite anzupassen */
+  height: 291px;
+  border-top: 4px solid rgba(112, 230, 28, 1);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  > .foocontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px 100px;
+    > .firstfoo {
+      > h1 {
+        @include h1;
+        margin: 0;
+      }
+      > span {
+        @include span;
+      }
+    }
+
+    > .secondfoo {
+     >h3{
+        @include h1;
+        font-size: 23px;
+        font-weight: 400;
+
+    }
+}
+    > .thirdfoo {
+        display: flex;
+        gap: 42px;
+    }
+  }
+}

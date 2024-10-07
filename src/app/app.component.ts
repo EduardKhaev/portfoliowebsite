@@ -10,6 +10,7 @@ import { PortfolioHeaderComponent } from "./portfolio-header/portfolio-header.co
 import { ReferencesComponent } from "./references/references.component";
 import { ContactHeaderComponent } from "./contact-header/contact-header.component";
 import { ContactComponent } from "./contact/contact.component";
+import { FooterComponent } from "./footer/footer.component";
 
 
 
@@ -27,7 +28,9 @@ import { ContactComponent } from "./contact/contact.component";
     PortfolioHeaderComponent,
     ReferencesComponent,
     ContactHeaderComponent,
-    ContactComponent],
+    ContactComponent, 
+    FooterComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
