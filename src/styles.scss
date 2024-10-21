@@ -3,6 +3,7 @@ body {
   background-color: rgba(20, 29, 47, 1);
   z-index: -10;
   box-sizing: border-box;
+  overflow-x: hidden;
   
   
 }
@@ -212,6 +213,12 @@ html {
 
   &:hover {
     border-color: #70e61c;
+  }
+  &:focus {
+   border-color: red;  
+   background-image: url(./assets/img/inputRequired.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 10px);            
   }
   &::placeholder {
     color: white;

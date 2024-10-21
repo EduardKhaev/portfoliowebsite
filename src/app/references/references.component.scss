@@ -18,6 +18,7 @@ main {
     transform: rotate(80deg);
     right: -550px;
     top: -610px;
+    
   }
 
   .referencecontainer {
@@ -58,7 +59,10 @@ main {
           gap: 16px;
           margin-left: 96px;
           margin-right: 96px;
-          margin-bottom: 46px;
+          position: absolute;
+          width: 75%;
+          bottom: 5px;
+
           > .emptydiv {
             @include purbleline;
             display: flex;

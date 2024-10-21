@@ -9,9 +9,13 @@ main {
     position: absolute;
     top: 1050px;
     left: -350px;
+    z-index: -1;
 }
 
   .portfolioleft {
+    img{
+      width: 100%;
+    }
   }
   .portfoliorightreverse{
     display: flex;
@@ -59,6 +63,68 @@ main {
       margin-top: 35px;
       display: flex;
       gap: 86px;
+      .Btnprimary {
+        @include liveTestBtn;
+      }
+      .Btnsecondary {
+        @include gitHubBtn;
+      }
+    }
+  }
+}
+@media (max-width: 1200px){
+  main{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+      .portfolioright{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+          span{
+            display: flex;
+            text-align: center;
+          }
+      }
+      
+  }
+  main{
+    
+    .portfoliorightreverse{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .spanreverse{
+          display: flex;
+          text-align: center;
+        }
+      }
+  }
+}
+
+@media (max-width: 1000px){
+  .portfolioleft {
+    max-width: calc(80% - 5px);
+    img{
+      
+    }
+  }
+  .portfolioright {
+    
+    h2 {
+      
+    }
+
+    h3 {
+      
+    }
+
+    span {
+      
+    }
+
+    div {
+      
       .Btnprimary {
         @include liveTestBtn;
       }

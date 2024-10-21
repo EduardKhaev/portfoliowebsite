@@ -11,8 +11,8 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 export class ReferencesComponent implements AfterViewInit {
   @ViewChild('backarrow', { static: false }) backarrow!: ElementRef;
   @ViewChild('forwardarrow', { static: false }) forwardarrow!: ElementRef;
-  currentIndex: number = 0; // Aktueller Index für die Ellipsen
-  readonly MAX_INDEX = 2; // Maximaler Index (für 3 Bilder)
+  currentIndex: number = 0;
+  readonly MAX_INDEX = 2;
 
   ellipsesImages: string[] = [
     'assets/img/slideelements/elipsegreen.png',
@@ -22,28 +22,23 @@ export class ReferencesComponent implements AfterViewInit {
 
   references = [
     {
-      text: `Michael really kept the team together with his great organization and
-             clear communication. We wouldn't have got this far without his
-             commitment.`,
-      userName: 'Team Partner, Lisa Mustermann',
+      text: `Eduard was a very valuable team member who was always friendly and helpful. He worked hard to contribute and was an important part of the team's success. His positive attitude and willingness to work with others made it easier to collaborate and created a nice working environment.`,
+      userName: 'Team Partner, Galina Antipin',
       img: '../../assets/img/business-attire-women.jpg'
     },
     {
-      text: `Patrick's leadership skills are amazing. He guided the team through
-             complex challenges and always stayed calm and focused.`,
-      userName: 'Team Partner, John Doe',
+      text: `It is very easy to work successfully with Eduard. His valuable contributions to the project always met the specifications and integrated seamlessly into the overall work. I was glad to have Eduard on the team.`,
+      userName: 'Team Partner, Patrick Schlieker',
       img: 'assets/img/business-attire-men.jpg'
     },
     {
-      text: `Galina's dedication to solving difficult tasks made a huge impact on
-             our project's success.`,
-      userName: 'Team Partner, Sarah Example',
+      text: `Eduard was a helpful team member on our project. He always showed himself to be flexible and often stepped in wherever he was needed. His stamina was strong and he remained efficient under pressure. I appreciate his adaptability and the positive attitude he brought to the team.`,
+      userName: 'Team Partner, Maximilian Stigler',
       img: 'assets/img/business-attire-women-2.jpg'
     }
   ];
 
   ngAfterViewInit() {
-    // Back Arrow Hover-Effekt
     this.backarrow.nativeElement.addEventListener('mouseenter', () => {
       this.backarrow.nativeElement.querySelector('img').src = '../../assets/img/slideelements/arrowbackcircled.png';
     });
@@ -51,7 +46,6 @@ export class ReferencesComponent implements AfterViewInit {
       this.backarrow.nativeElement.querySelector('img').src = '../../assets/img/slideelements/arrowback.png';
     });
 
-    // Forward Arrow Hover-Effekt
     this.forwardarrow.nativeElement.addEventListener('mouseenter', () => {
       this.forwardarrow.nativeElement.querySelector('img').src = '../../assets/img/slideelements/arrowforwardcircled.png';
     });
@@ -65,7 +59,6 @@ export class ReferencesComponent implements AfterViewInit {
       if (this.currentIndex > this.MAX_INDEX) {
         this.currentIndex = 0; // Zurücksetzen auf den ersten Index
       }
-      
     });
 
     // Click-Event für Rückwärts-Pfeil
@@ -74,9 +67,6 @@ export class ReferencesComponent implements AfterViewInit {
       if (this.currentIndex < 0) {
         this.currentIndex = this.MAX_INDEX; // Setzt auf den letzten Index zurück
       }
-      
     });
   }
-
-  
 }

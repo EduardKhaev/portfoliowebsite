@@ -21,7 +21,22 @@ export class ContactComponent {
     email:"",
     message:"",
     checkbox: false
-  };
+  }
+
+  onFocus(input: any) {
+    input.classList.remove('invalid');
+  }
+  
+  onBlur(input: any) {
+    // Nutze Angular's Validierung direkt
+    if (input.valid) {
+      input.classList.add('valid');
+      input.classList.remove('invalid');
+    } else {
+      input.classList.add('invalid');
+      input.classList.remove('valid');
+    }
+  }
 
   mailTest = true;
 
@@ -37,22 +52,18 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
+    // Überprüfen, ob das Formular korrekt ausgefüllt ist
+    if (ngForm.submitted && ngForm.form.valid) {
+      // Beispiel: POST-Request senden, um Daten zu übermitteln
+      this.http.post('https://example.com/sendMail.php', this.contactData).subscribe({
+        next: (response) => {
+          console.log('Form successfully submitted!', response);
+          ngForm.resetForm(); // Formular zurücksetzen
+        },
+        error: (error) => {
+          console.error('Error submitting form:', error);
+        }
+      });
     }
   }
-
 }
