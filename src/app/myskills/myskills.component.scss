@@ -8,12 +8,14 @@
   margin-bottom: 180px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   > .greenshadowms {
     position: absolute;
-    top: 2400px;
-    left: -580px;
+    top: 322px;
+    left: -635px;
     pointer-events: none;
+    z-index: -1;
   }
   .myskillleft {
     position: relative;
@@ -21,6 +23,7 @@
     flex-wrap: wrap;
     justify-content: flex-start; // Links ausrichten
     gap: 5px; // Kleineren Abstand zwischen den Containern
+    z-index: 1;
 
     .hover-image {
       position: absolute;
@@ -76,6 +79,7 @@
     display: flex;
     flex-direction: column;
     max-width: 520px;
+    z-index: 1;
     > div {
       display: flex;
       justify-content: flex-end;
@@ -105,6 +109,7 @@
 
       > p {
         @include whitetext;
+        white-space: nowrap;
         > span {
           @include purbletext;
         }
@@ -131,12 +136,13 @@
     margin-bottom: 180px;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     > .greenshadowms {
       position: absolute;
-      top: 2656px !important;
-      left:-650px !important; 
-      z-index: -1 !important;
+      top: 940px;
+      left: -705px;
+      z-index: -1;
     }
     div {
       display: flex;
@@ -159,6 +165,7 @@
       display: flex;
       flex-direction: column;
       margin-right: 100px;
+      z-index: 1;
       div {
         display: flex;
         justify-content: center;
@@ -167,7 +174,7 @@
         > .spanresponsive {
           @include span;
           text-align: center;
-          max-width: calc(70% - 5px)
+          max-width: calc(70% - 5px);
         }
       }
 
@@ -227,12 +234,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        
+
         width: 100%;
         p {
           @include whitetext;
           text-align: end;
-          
+
           .color-text {
             @include purbletext;
           }
@@ -240,7 +247,7 @@
         span {
           @include span;
           text-align: end;
-          max-width: calc(80% - 5px)
+          max-width: calc(80% - 5px);
         }
         button {
           @include greenbutton;
@@ -253,25 +260,25 @@
   }
 }
 
-
-
-
-@media (max-width: 1290px) {
+@media (max-width: 760px) {
   .desktopdesign {
     display: none;
   }
 
   .responsivedesign {
     padding-top: 180px;
-    margin-left: 100px;
+    margin-right: 0px;
+    margin-left: 50px;
     margin-bottom: 180px;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     > .greenshadowms {
       position: absolute;
-      top: 2400px;
-      left: -580px;
+      top: 730px;
+      left: -680px;
+      z-index: -1;
     }
     div {
       display: flex;
@@ -281,7 +288,7 @@
       .myskillstitle {
         h1 {
           @include h1;
-          font-size: 90px;
+          font-size: 70px;
         }
       }
       .emptydiv {
@@ -293,12 +300,13 @@
     .myskillresponsivebody {
       display: flex;
       flex-direction: column;
-      margin-right: 100px;
+      margin-right: 50px;
+      z-index: 1;
       div {
         display: flex;
         justify-content: flex-end;
         width: 100%;
-        margin-top: 32px;
+
         > .spanresponsive {
           @include span;
           text-align: end;
@@ -312,9 +320,10 @@
         justify-content: center;
         position: relative;
         max-width: 664px;
+        margin-top: -25px;
         .item {
           flex: 1 1 calc(24% - 5px); // Verringerte Breite pro Container, sodass 4 in eine Reihe passen
-          height: 120px;
+          height: 60px;
           max-width: calc(
             24% - 5px
           ); // Breite entsprechend angepasst, um den Abstand zu kompensieren
@@ -324,9 +333,10 @@
           flex-direction: column;
           align-items: center;
           position: relative;
+          margin-top: 65px;
           img {
-            width: 60px;
-            max-width: 60px;
+            width: 50px;
+            max-width: 50px;
             &:hover {
               cursor: pointer;
               transition: all 125ms ease;
@@ -337,6 +347,7 @@
             margin-top: 10px;
             transition: color 125ms ease, opacity 125ms ease;
             @include p;
+            font-size: 15px;
           }
         }
 
@@ -361,25 +372,319 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        
+        margin-right: -50px;
         width: 100%;
         p {
           @include whitetext;
           text-align: end;
-          
+
           .color-text {
             @include purbletext;
           }
         }
         span {
           @include span;
-          text-align: end
+          text-align: end;
+        }
+        .responsebtn {
+          display: flex;
+          justify-content: center;
+          button {
+            @include greenbutton;
+            max-width: 200px;
+            max-height: 58px;
+            padding: 15px 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .desktopdesign {
+    display: none;
+  }
+
+  .responsivedesign {
+    padding-top: 180px;
+    margin-left: 50px;
+    margin-bottom: 180px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    > .greenshadowms {
+      position: absolute;
+      top: 690px;
+      left: -670px;
+
+    }
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 32px;
+      .myskillstitle {
+        h1 {
+          @include h1;
+          font-size: 47px;
+          white-space: nowrap;
+        }
+      }
+      .emptydiv {
+        @include purbleline;
+        width: 28px;
+      }
+    }
+
+    .myskillresponsivebody {
+      display: flex;
+      flex-direction: column;
+      margin-right: 50px;
+      div {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+
+        > .spanresponsive {
+          @include span;
+          text-align: end;
+          font-size: 14px;
+          min-width: 274px;
+          margin-right: -28px;
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        max-width: 664px;
+        margin-top: -25px;
+        .item {
+          flex: 1 1 calc(24% - 5px); // Verringerte Breite pro Container, sodass 4 in eine Reihe passen
+          height: 60px;
+          max-width: calc(
+            24% - 5px
+          ); // Breite entsprechend angepasst, um den Abstand zu kompensieren
+          justify-content: center;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          margin-top: 65px;
+          img {
+            width: 40px;
+            max-width: 40px;
+            &:hover {
+              cursor: pointer;
+              transition: all 125ms ease;
+              transform: translateY(-10px);
+            }
+          }
+          p {
+            margin-top: 10px;
+            transition: color 125ms ease, opacity 125ms ease;
+            @include p;
+            font-size: 14px;
+          }
+        }
+
+        #lastskill {
+          #lastSkillImg {
+          }
+          #lastSkillText {
+          }
+        }
+      }
+
+      .hover-image {
+        position: absolute;
+        top: 180px;
+        left: 420px;
+        transform: translateX(-50%);
+        transition: opacity 125ms ease;
+        opacity: 0;
+      }
+
+      .myskillbody {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: -50px;
+        width: 100%;
+        p {
+          @include whitetext;
+          text-align: end;
+          white-space: nowrap;
+          font-size: 26px;
+
+          .color-text {
+            @include purbletext;
+            font-size: 26px;
+          }
+        }
+        span {
+          @include span;
+          text-align: end;
+          min-width: 280px;
         }
         button {
           @include greenbutton;
           max-width: 200px;
           max-height: 58px;
           padding: 15px 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 410px) {
+  .desktopdesign {
+    display: none;
+  }
+
+  .responsivedesign {
+    padding-top: 100px;
+    margin-left: 50px;
+    margin-bottom: 180px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    > .greenshadowms {
+      position: absolute;
+      top: 690px;
+      left: -710px;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 32px;
+      .myskillstitle {
+        h1 {
+          @include h1;
+          font-size: 47px;
+          white-space: nowrap;
+        }
+      }
+      .emptydiv {
+        @include purbleline;
+        width: 28px;
+      }
+    }
+
+    .myskillresponsivebody {
+      display: flex;
+      flex-direction: column;
+      margin-right: 50px;
+      div {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+
+        > .spanresponsive {
+          @include span;
+          text-align: end;
+          font-size: 14px;
+          min-width: 274px;
+          margin-right: -28px;
+        }
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        max-width: 664px;
+        margin-top: -25px;
+        margin-left: -50px;
+        margin-right: -45px;
+        width: 280px;
+        .item {
+          flex: 1 1 calc(24% - 5px); // Verringerte Breite pro Container, sodass 4 in eine Reihe passen
+          height: 60px;
+          max-width: calc(
+            24% - 5px
+          ); // Breite entsprechend angepasst, um den Abstand zu kompensieren
+          justify-content: center;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          margin-top: 65px;
+          img {
+            width: 40px;
+            max-width: 40px;
+            &:hover {
+              cursor: pointer;
+              transition: all 125ms ease;
+              transform: translateY(-10px);
+            }
+          }
+          p {
+            margin-top: 10px;
+            transition: color 125ms ease, opacity 125ms ease;
+            @include p;
+            font-size: 14px;
+          }
+        }
+
+        #lastskill {
+          #lastSkillImg {
+          }
+          #lastSkillText {
+          }
+        }
+      }
+
+      .hover-image {
+        position: absolute;
+        top: 180px;
+        left: 420px;
+        transform: translateX(-50%);
+        transition: opacity 125ms ease;
+        opacity: 0;
+      }
+
+      .myskillbody {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: -50px;
+        width: 100%;
+        p {
+          @include whitetext;
+          text-align: end;
+          white-space: nowrap;
+          font-size: 21px;
+
+          .color-text {
+            @include purbletext;
+            font-size: 21px;
+          }
+        }
+        span {
+          @include span;
+          text-align: end;
+          min-width: 280px;
+        }
+        button {
+          @include greenbutton;
+          max-width: 200px;
+          max-height: 58px;
+          padding: 15px 30px;
+          margin-right: 30px;
+          white-space: nowrap;
         }
       }
     }
