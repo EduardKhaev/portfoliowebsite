@@ -1,7 +1,7 @@
 @import "../../styles.scss";
 
 main {
-  margin-left: 100px;
+  margin-left: 0px;
 
   > .portfoliotitle {
     padding-top: 80px;
@@ -9,10 +9,12 @@ main {
     justify-content: flex-end;
     align-items: center;
     gap: 32px;
+    margin-left: 100px;
 
     > h1 {
       @include h1;
       font-size: 90px;
+      
     }
 
     > .emptydivleft {
@@ -38,6 +40,7 @@ main {
 
 @media (max-width: 1550px) {
   .portfoliotitle {
+    
     .emptydivright {
       max-width: calc(75% - 5px);
     }
@@ -46,7 +49,7 @@ main {
 
 @media (max-width: 1000px) {
   main {
-    margin-left: 100px;
+    margin-left: 0px;
 
     > .portfoliotitle {
       padding-top: 80px;
@@ -54,16 +57,23 @@ main {
       justify-content: flex-end;
       align-items: center;
       gap: 32px;
+      margin-left: 50px;
       .emptydivright {
-        max-width: calc(35% - 5px);
+        max-width: calc(25% - 5px);
       }
       > h1 {
         font-size: 60px;
       }
 
       > .emptydivleft {
+        width: 80px;
+      height: 3px;
+      @include purbleline;
       }
       > .emptydivright {
+        width: calc(35% - 5px);
+        height: 3px;
+        @include purbleline;
       }
     }
     > div {
@@ -71,6 +81,83 @@ main {
         display: flex;
         text-align: center;
         max-width: calc(80% - 5px);
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    margin-left: 0px;
+  
+    > .portfoliotitle {
+      padding-top: 80px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 32px;
+      margin-left: 30px;
+  
+      > h1 {
+        @include h1;
+        font-size: 50px;
+      }
+  
+      > .emptydivleft {
+        width: 50px;
+        height: 3px;
+        @include purbleline;
+      }
+      > .emptydivright {
+        width: calc(15% - 5px);
+        height: 3px;
+        @include purbleline;
+      }
+    }
+    > div {
+      display: flex;
+      justify-content: center;
+      > span {
+        @include span;
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+      margin-left: 0px;
+    > .portfoliotitle {
+      padding-top: 80px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 25px;
+  
+      > h1 {
+        @include h1;
+        font-size: 37px;
+        
+      }
+  
+      > .emptydivleft {
+        width: 40px;
+        height: 3px;
+        @include purbleline;
+      }
+      > .emptydivright {
+        width: calc(15% - 5px);
+        height: 3px;
+        @include purbleline;
+      }
+    }
+    > div {
+      display: flex;
+      justify-content: center;
+      > span {
+        @include span;
+        margin-top: 40px;
       }
     }
   }
