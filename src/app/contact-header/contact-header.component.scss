@@ -24,3 +24,87 @@ main{
     }
     
 }
+
+@media (max-width: 1000px){
+    main{
+        margin-top: 182px;
+        margin-right: 100px;
+        >.contacttitle{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 32px;
+    
+                >h1{
+                    @include h1;
+                    font-size: 60px;
+                }
+    
+                >.emptydivleft{
+                    width: 40%;
+                    height: 3px;
+                    @include purbleline;
+                }
+                
+    
+        }
+        
+    }
+    
+}
+
+@media (max-width: 700px){
+    main{
+        margin-top: 182px;
+        margin-right: 100px;
+        >.contacttitle{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 32px;
+    
+                >h1{
+                    @include h1;
+                    font-size: 50px;
+                }
+    
+                >.emptydivleft{
+                    width: 40%;
+                    height: 3px;
+                    @include purbleline;
+                }
+                
+    
+        }
+        
+    }
+    
+}
+
+@media (max-width: 500px){
+    main{
+        margin-top: 182px;
+        margin-right: 50px;
+        >.contacttitle{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 32px;
+    
+                >h1{
+                    @include h1;
+                    font-size: 37px;
+                }
+    
+                >.emptydivleft{
+                    width: 40%;
+                    height: 3px;
+                    @include purbleline;
+                }
+                
+    
+        }
+        
+    }
+    
+}
