@@ -11,22 +11,41 @@
           Need a Frontend developer? <b>Contact me!</b>
         </span>
       </div>
-      <form (ngSubmit)="onSubmit()" action="action_page.php">
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" action="action_page.php">
 
         <label for="name"></label>
-        <input *ngForm="contactData.name" type="text" id="name" name="name" placeholder="Your name">
-    
-        <label for="email"></label>
-        <input *ngForm="contactData.email" type="text" id="email" name="email" placeholder="Your email">
-    
-        <label *ngForm="contactData.message" for="subject"></label>
-        <textarea id="subject" name="subject" placeholder="Your message"></textarea>
+        <input #name="ngModel"  [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required>
+        @if (!name.valid && name.touched) {
+          <span class="requiredspan">Please your name</span>
+        }
 
-        <label for="checkbox"></label>
-        <input *ngForm="contactData.checkbox" type="checkbox" name="checkbox" id="checkbox">
-    
-        <input  type="submit" value="Submit">
-    
+        <label for="email"></label>
+        <input #email="ngModel"  [(ngModel)]="contactData.email" type="text" id="email" name="email" placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+        @if (!email.valid && email.touched) {
+          <span class="requiredspan">Please enter your email</span>
+        }
+
+        <label  for="subject"></label>
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject" placeholder="Your message" required></textarea>
+        @if (!message.valid && message.touched) {
+          <span class="requiredspan">Please enter your message</span>
+        }
+        <div>
+        <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" name="checkbox" id="checkbox" required>
+        <label for="checkbox">
+          <span class="white-span">I've read the </span> 
+          <span class="purple-span">privacy policy </span> 
+          <span class="white-span">and agree to the processing of my data as outlined.</span>
+          </label>
+        </div>
+        @if (!checkbox.valid && checkbox.touched) {
+          <span class="requiredspan">Please accept the privacy policy</span>
+        }
+      
+
+        <input type="submit" [disabled]="!contactForm.valid" value="Send message {{smiley}}">
+       
+
       </form>
     </div>
   </div>
