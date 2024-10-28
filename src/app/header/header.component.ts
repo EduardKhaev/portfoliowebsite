@@ -9,10 +9,26 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  activeLink: string = '';
+  menuOpen = false;
+  activeLink = '';
 
-  setActiveLink(link: string): void {
-    this.activeLink = link;
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
-  
+
+  setActiveLink(link: string) {
+    this.activeLink = link;
+    this.menuOpen = false;
+
+    
+    const responsive = window.innerWidth <= 1290;
+
+    if (link === 'link2') { 
+      const sectionId = responsive ? 'skillsection2' : 'skillsection1';
+      document.querySelector(`#${sectionId}`)?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      document.querySelector(`#${link}`)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }
+

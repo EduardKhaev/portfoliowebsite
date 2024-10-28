@@ -10,12 +10,14 @@ header {
   top: 0;
   background: rgba(20, 29, 47, 1);
   z-index: 10;
-
+  .headerresponsive {
+    display: none;
+  }
 
   div {
     margin-left: 100px;
     position: relative;
-  
+
     > h2 {
       font-family: "Poppins";
       font-size: 44px;
@@ -27,22 +29,25 @@ header {
       );
       background-size: 2000%;
       transform: skewX(-90deg);
-      animation: shine-name 1s forwards, slide-gradient-name 2s infinite forwards;
+      animation: shine-name 1s forwards,
+        slide-gradient-name 2s infinite forwards;
       background-clip: text;
       position: absolute;
       top: -73px;
       color: transparent;
-  
+
       /* Animation für den Text-Slide */
       @keyframes shine-name {
         0% {
-          transform: translateX(-250%); /* Start weit links außerhalb des Bildschirms */
+          transform: translateX(
+            -250%
+          ); /* Start weit links außerhalb des Bildschirms */
         }
         100% {
           transform: translateX(0); /* Endposition */
         }
       }
-  
+
       @keyframes slide-gradient-name {
         0% {
           background-position: 0% 50%;
@@ -51,8 +56,8 @@ header {
           background-position: 100% 50%;
         }
       }
+    }
   }
-} 
 
   .navlinkcontainer {
     width: 326px;
@@ -61,6 +66,365 @@ header {
     margin-right: 100px;
     > a {
       @include a;
+      &:hover {
+        cursor: pointer;
+        color: rgba(112, 230, 28, 1);
+      }
+
+      &.active {
+        color: rgba(112, 230, 28, 1);
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -4px;
+          width: 50px;
+          height: 3px;
+          background-color: rgb(151, 71, 255);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: rgba(20, 29, 47, 1);
+    z-index: 10;
+
+    .headerresponsive {
+      display: block;
+    }
+
+    div {
+      margin-left: 100px;
+      position: relative;
+
+      > h2 {
+        font-family: "Poppins";
+        font-size: 44px;
+        background: linear-gradient(
+          90deg,
+          rgb(112, 230, 28),
+          rgb(112, 150, 28),
+          rgb(112, 230, 28)
+        );
+        background-size: 2000%;
+        transform: skewX(-90deg);
+        animation: shine-name 1s forwards,
+          slide-gradient-name 2s infinite forwards;
+        background-clip: text;
+        position: absolute;
+        top: -73px;
+        color: transparent;
+
+        @keyframes shine-name {
+          0% {
+            transform: translateX(-250%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slide-gradient-name {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 100% 50%;
+          }
+        }
+      }
+    }
+
+    /* Hamburger Menu Styles */
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      margin-right: 30px;
+      &:hover {
+        cursor: pointer;
+      }
+      span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px;
+        background: #fff;
+        transition: 0.3s;
+      }
+    }
+
+    /* Navigation wird ersetzt */
+    .navlinkcontainer {
+      display: none;
+    }
+
+    /* Offenbares Menü */
+    .open {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -42px;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8); // semitransparentes Overlay
+      margin: 0;
+      z-index: 9;
+      gap: 60px;
+
+      .navlinkcontainer {
+        position: relative;
+        background-color: rgba(20, 29, 47, 1); // Menü Hintergrundfarbe
+        border-radius: 10px;
+        margin: auto;
+        padding: 20px;
+        width: 250px; // Menübreite
+      }
+
+      > a {
+        @include a;
+        &:hover {
+          cursor: pointer;
+          color: rgba(112, 230, 28, 1);
+        }
+  
+        &.active {
+          color: rgba(112, 230, 28, 1);
+          position: relative;
+  
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 50px;
+            height: 3px;
+            background-color: rgb(151, 71, 255);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: rgba(20, 29, 47, 1);
+    z-index: 10;
+
+    .headerresponsive {
+      display: block;
+    }
+
+    div {
+      margin-left: 50px;
+      position: relative;
+
+      > h2 {
+        font-family: "Poppins";
+        font-size: 44px;
+        background: linear-gradient(
+          90deg,
+          rgb(112, 230, 28),
+          rgb(112, 150, 28),
+          rgb(112, 230, 28)
+        );
+        background-size: 2000%;
+        transform: skewX(-90deg);
+        animation: shine-name 1s forwards,
+          slide-gradient-name 2s infinite forwards;
+        background-clip: text;
+        position: absolute;
+        top: -73px;
+        color: transparent;
+
+        @keyframes shine-name {
+          0% {
+            transform: translateX(-250%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slide-gradient-name {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 100% 50%;
+          }
+        }
+      }
+    }
+
+    /* Hamburger Menu Styles */
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      margin-right: 30px;
+      span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px;
+        background: #fff;
+        transition: 0.3s;
+      }
+    }
+
+    /* Navigation wird ersetzt */
+    .navlinkcontainer {
+      display: none;
+    }
+
+    /* Offenbares Menü */
+    .open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 110px;
+      right: 30px;
+      background-color: rgba(20, 29, 47, 1);
+      width: 200px;
+      z-index: 9;
+
+      a {
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(112, 230, 28, 1);
+
+        &:hover {
+          background: rgba(112, 230, 28, 0.1);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: rgba(20, 29, 47, 1);
+    z-index: 10;
+
+    .headerresponsive {
+      display: block;
+    }
+
+    div {
+      margin-left: 25px;
+      position: relative;
+
+      > h2 {
+        font-family: "Poppins";
+        font-size: 44px;
+        background: linear-gradient(
+          90deg,
+          rgb(112, 230, 28),
+          rgb(112, 150, 28),
+          rgb(112, 230, 28)
+        );
+        background-size: 2000%;
+        transform: skewX(-90deg);
+        animation: shine-name 1s forwards,
+          slide-gradient-name 2s infinite forwards;
+        background-clip: text;
+        position: absolute;
+        top: -73px;
+        color: transparent;
+
+        @keyframes shine-name {
+          0% {
+            transform: translateX(-250%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes slide-gradient-name {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 100% 50%;
+          }
+        }
+      }
+    }
+
+    /* Hamburger Menu Styles */
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      margin-right: 30px;
+      span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px;
+        background: #fff;
+        transition: 0.3s;
+      }
+    }
+
+    /* Navigation wird ersetzt */
+    .navlinkcontainer {
+      display: none;
+    }
+
+    /* Offenbares Menü */
+    .open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 110px;
+      right: 30px;
+      background-color: rgba(20, 29, 47, 1);
+      width: 200px;
+      z-index: 9;
+
+      a {
+        padding: 15px 20px;
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(112, 230, 28, 1);
+
+        &:hover {
+          background: rgba(112, 230, 28, 0.1);
+        }
+      }
     }
   }
 }

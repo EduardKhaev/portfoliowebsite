@@ -49,25 +49,6 @@ html {
   font-size: 23px;
   font-family: "Poppins";
 
-  &:hover {
-    cursor: pointer;
-    color: rgba(112, 230, 28, 1);
-  }
-
-  &.active {
-    color: rgba(112, 230, 28, 1);
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 50px;
-      height: 3px;
-      background-color: rgb(151, 71, 255);
-    }
-  }
 }
 
 @mixin colored-text {
@@ -105,7 +86,7 @@ html {
 }
 
 @mixin purbletext {
-  color: #9747ff;
+  color: rgb(151, 71, 255);
   font-family: "Poppins";
   font-weight: 700;
   font-size: 32px;

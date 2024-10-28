@@ -1,4 +1,5 @@
 <main>
+  <img class="shadowcontacts" src="../../assets/img/shadowpurplecontact.png" alt="">
   <div class="contactcotainer">
     <div class="contactbody">
       <div class="leftbody">
@@ -26,15 +27,15 @@
         }
 
         <label  for="subject"></label>
-        <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject" placeholder="Your message" required></textarea>
+        <textarea style="height: 250px;" #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject" placeholder="Your message" required></textarea>
         @if (!message.valid && message.touched) {
           <span class="requiredspan">Please enter your message</span>
         }
-        <div>
+        <div class="divcheckbox">
         <input #checkbox="ngModel" [(ngModel)]="contactData.checkbox" type="checkbox" name="checkbox" id="checkbox" required>
-        <label for="checkbox">
+        <label>
           <span class="white-span">I've read the </span> 
-          <span class="purple-span">privacy policy </span> 
+          <a class="purple-span">privacy policy </a> 
           <span class="white-span">and agree to the processing of my data as outlined.</span>
           </label>
         </div>
@@ -42,8 +43,9 @@
           <span class="requiredspan">Please accept the privacy policy</span>
         }
       
-
+        <div class="submitbtndiv">
         <input type="submit" [disabled]="!contactForm.valid" value="Send message {{smiley}}">
+        </div>
        
 
       </form>

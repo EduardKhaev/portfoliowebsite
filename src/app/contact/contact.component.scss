@@ -3,30 +3,30 @@
 main {
   margin-top: 40px;
   margin-bottom: 180px;
+  width: 100%;
   position: relative;
 
   > .shadowcontacts {
     position: absolute;
-    top: 130px;
-    left: 0;
+    top: 278px;
+    left: -100px;
     z-index: -5;
   }
   > .contactcotainer {
-    display: flex;
-    justify-content: center;
     margin-left: 100px;
     margin-right: 100px;
 
     > .contactbody {
       display: flex;
-      gap: 149px;
+      justify-content: space-between;
+      gap: 50px;
 
       > .leftbody {
         flex: 1;
         display: flex;
         flex-direction: column;
         max-width: 474px;
-        min-width: 280px;
+        min-width: 380px;
 
         > h2 {
           @include h1;
@@ -38,6 +38,7 @@ main {
         > .spanOne {
           @include span;
           margin-bottom: 16px;
+          width: 100%;
         }
 
         > .spanTwo {
@@ -48,10 +49,12 @@ main {
       > form {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        gap: 12px;
         input[type="text"],
         textarea {
           width: 100%;
+          max-width: 590px;
           background-color: transparent;
           color: white;
           padding: 12px;
@@ -62,23 +65,26 @@ main {
           margin-top: 6px;
           margin-bottom: 16px;
           cursor: pointer;
-          position: relative; 
+          position: relative;
 
-          &:hover {
-            border: 1px solid #70e61c; 
+          &::placeholder {
+            color: rgba(255, 255, 255, 1);
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 12px;
           }
 
-          
+          &:hover {
+            border: 1px solid #70e61c;
+          }
 
-          
-            &.ng-invalid.ng-touched {
-              border: 1px solid red; 
-              background-image: url(../../assets/img/inputRequired.png);
-              background-repeat: no-repeat;
-              background-position: right 10px center;
-              
-            }
-          
+          &.ng-invalid.ng-touched {
+            border: 1px solid red;
+            background-image: url(../../assets/img/inputRequired.png);
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+          }
+
           &.ng-valid.ng-touched {
             border: 1px solid #70e61c; // Grün bei gültig und berührt
             background-image: url(../../assets/img/inputChecked.png);
@@ -98,6 +104,7 @@ main {
           font-family: "Poppins";
           font-weight: 400;
           font-size: 14px;
+          cursor: pointer;
         }
         .requiredspan {
           color: red;
@@ -107,14 +114,15 @@ main {
           margin-top: -10px;
           margin-bottom: 10px;
         }
-        div {
+        .divcheckbox {
           display: flex;
           align-items: center;
           margin-bottom: 10px;
+          gap: 12px;
           input[type="checkbox"] {
             appearance: none;
-            width: 20px;
-            height: 20px;
+            min-width: 20px;
+            min-height: 20px;
             border: 2px solid #70e61c;
             border-radius: 4px;
             cursor: pointer;
@@ -128,10 +136,10 @@ main {
             &:checked::before {
               content: "";
               position: absolute;
-              top: 3px;
-              left: 6px;
+              top: 0px;
+              left: 5px;
               width: 4px;
-              height: 8px;
+              height: 11px;
               border: solid #70e61c;
               border-width: 0 2px 2px 0;
               transform: rotate(45deg);
@@ -142,36 +150,626 @@ main {
             }
           }
         }
-
-        input[type="submit"] {
-          background-color: #b6b6b6;
-          color: white;
-          font-family: "Poppins";
-          font-weight: 400;
-          font-size: 23px;
-          padding: 12px 20px;
-          width: 253px;
-          height: 58px;
-          border: none;
-          border-radius: 10px;
-          margin-top: 16px;
-          cursor: pointer;
-
-          &:disabled {
+        .submitbtndiv {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          input[type="submit"] {
             background-color: #b6b6b6;
-            cursor: not-allowed;
+            color: white;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 23px;
+            padding: 12px 20px;
+            width: 253px;
+            height: 58px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 16px;
+            cursor: pointer;
+
+            &:disabled {
+              background-color: #b6b6b6;
+              cursor: not-allowed;
+            }
+
+            &:not(:disabled) {
+              background-color: #70e61c;
+              cursor: pointer;
+            }
           }
 
-          &:not(:disabled) {
-            background-color: #70e61c;
-            cursor: pointer;
+          .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    margin-top: 40px;
+    margin-bottom: 180px;
+    width: 100%;
+    position: relative;
+
+    > .shadowcontacts {
+      position: absolute;
+        top: 488px;
+        left: -190px;
+        z-index: -5;
+    
+    }
+    > .contactcotainer {
+      margin-left: 100px;
+      margin-right: 100px;
+
+      > .contactbody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+
+        > .leftbody {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          max-width: 474px;
+          min-width: 380px;
+
+          > h2 {
+            @include h1;
+            font-size: 32px;
+            margin-bottom: 24px;
+            white-space: nowrap;
+          }
+
+          > .spanOne {
+            @include span;
+            margin-bottom: 16px;
+            width: 100%;
+          }
+
+          > .spanTwo {
+            @include span;
           }
         }
 
-        .container {
-          border-radius: 5px;
-          background-color: #f2f2f2;
-          padding: 20px;
+        > form {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+          input[type="text"],
+          textarea {
+            width: 100%;
+            max-width: 590px;
+            background-color: transparent;
+            color: white;
+            padding: 12px;
+            border: 1px solid #9747ff;
+            outline: none;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            cursor: pointer;
+            position: relative;
+
+            &::placeholder {
+              color: rgba(255, 255, 255, 1);
+              font-family: "Poppins";
+              font-weight: 400;
+              font-size: 12px;
+            }
+
+            &:hover {
+              border: 1px solid #70e61c;
+            }
+
+            &.ng-invalid.ng-touched {
+              border: 1px solid red;
+              background-image: url(../../assets/img/inputRequired.png);
+              background-repeat: no-repeat;
+              background-position: right 10px center;
+            }
+
+            &.ng-valid.ng-touched {
+              border: 1px solid #70e61c; // Grün bei gültig und berührt
+              background-image: url(../../assets/img/inputChecked.png);
+              background-repeat: no-repeat;
+              background-position: right 10px center;
+            }
+          }
+
+          .white-span {
+            color: white;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 14px;
+          }
+          .purple-span {
+            color: #9747ff;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 14px;
+            cursor: pointer;
+          }
+          .requiredspan {
+            color: red;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+          }
+          .divcheckbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 12px;
+            input[type="checkbox"] {
+              appearance: none;
+              min-width: 20px;
+              min-height: 20px;
+              border: 2px solid #70e61c;
+              border-radius: 4px;
+              cursor: pointer;
+              position: relative;
+
+              &:checked {
+                background-color: transparent;
+                border-color: #70e61c;
+              }
+
+              &:checked::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 5px;
+                width: 4px;
+                height: 11px;
+                border: solid #70e61c;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+              }
+
+              &:hover {
+                border-color: #9747ff;
+              }
+            }
+          }
+          .submitbtndiv {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            input[type="submit"] {
+              background-color: #b6b6b6;
+              color: white;
+              font-family: "Poppins";
+              font-weight: 400;
+              font-size: 23px;
+              padding: 12px 20px;
+              width: 253px;
+              height: 58px;
+              border: none;
+              border-radius: 10px;
+              margin-top: 16px;
+              cursor: pointer;
+
+              &:disabled {
+                background-color: #b6b6b6;
+                cursor: not-allowed;
+              }
+
+              &:not(:disabled) {
+                background-color: #70e61c;
+                cursor: pointer;
+              }
+            }
+
+            .container {
+              border-radius: 5px;
+              background-color: #f2f2f2;
+              padding: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    margin-top: 40px;
+    margin-bottom: 180px;
+    width: 100%;
+    position: relative;
+
+    > .shadowcontacts {
+      position: absolute;
+        top: 488px;
+        left: -190px;
+        z-index: -5;
+    
+    }
+    > .contactcotainer {
+      margin-left: 100px;
+      margin-right: 100px;
+
+      > .contactbody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+
+        > .leftbody {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          max-width: 474px;
+          min-width: 0px;
+
+          > h2 {
+            @include h1;
+            font-size: 20px;
+            margin-bottom: 24px;
+            white-space: nowrap;
+          }
+
+          > .spanOne {
+            @include span;
+            margin-bottom: 16px;
+            font-size: 12px;
+            width: 100%;
+          }
+
+          > .spanTwo {
+            @include span;
+            font-size: 12px;
+          }
+        }
+
+        > form {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+          input[type="text"],
+          textarea {
+            width: 100%;
+            max-width: 590px;
+            background-color: transparent;
+            color: white;
+            padding: 12px;
+            border: 1px solid #9747ff;
+            outline: none;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            cursor: pointer;
+            position: relative;
+
+            &::placeholder {
+              color: rgba(255, 255, 255, 1);
+              font-family: "Poppins";
+              font-weight: 400;
+              font-size: 12px;
+            }
+
+            &:hover {
+              border: 1px solid #70e61c;
+            }
+
+            &.ng-invalid.ng-touched {
+              border: 1px solid red;
+              background-image: url(../../assets/img/inputRequired.png);
+              background-repeat: no-repeat;
+              background-position: right 10px center;
+            }
+
+            &.ng-valid.ng-touched {
+              border: 1px solid #70e61c; // Grün bei gültig und berührt
+              background-image: url(../../assets/img/inputChecked.png);
+              background-repeat: no-repeat;
+              background-position: right 10px center;
+            }
+          }
+
+          .white-span {
+            color: white;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 14px;
+          }
+          .purple-span {
+            color: #9747ff;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 14px;
+            cursor: pointer;
+          }
+          .requiredspan {
+            color: red;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+          }
+          .divcheckbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 12px;
+            input[type="checkbox"] {
+              appearance: none;
+              min-width: 20px;
+              min-height: 20px;
+              border: 2px solid #70e61c;
+              border-radius: 4px;
+              cursor: pointer;
+              position: relative;
+
+              &:checked {
+                background-color: transparent;
+                border-color: #70e61c;
+              }
+
+              &:checked::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 5px;
+                width: 4px;
+                height: 11px;
+                border: solid #70e61c;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+              }
+
+              &:hover {
+                border-color: #9747ff;
+              }
+            }
+          }
+          .submitbtndiv {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            input[type="submit"] {
+              background-color: #b6b6b6;
+              color: white;
+              font-family: "Poppins";
+              font-weight: 400;
+              font-size: 23px;
+              padding: 12px 20px;
+              width: 253px;
+              height: 58px;
+              border: none;
+              border-radius: 10px;
+              margin-top: 16px;
+              cursor: pointer;
+
+              &:disabled {
+                background-color: #b6b6b6;
+                cursor: not-allowed;
+              }
+
+              &:not(:disabled) {
+                background-color: #70e61c;
+                cursor: pointer;
+              }
+            }
+
+            .container {
+              border-radius: 5px;
+              background-color: #f2f2f2;
+              padding: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    margin-top: 40px;
+    margin-bottom: 180px;
+    width: 100%;
+    position: relative;
+
+    > .shadowcontacts {
+      position: absolute;
+      top: 698px;
+      left: -80px;
+      z-index: -5;
+    
+    }
+    > .contactcotainer {
+      margin-left: 100px;
+      margin-right: 100px;
+
+      > .contactbody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+
+        > .leftbody {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          max-width: 474px;
+          min-width: 0px;
+
+          > h2 {
+            @include h1;
+            font-size: 20px;
+            margin-bottom: 24px;
+            white-space: nowrap;
+          }
+
+          > .spanOne {
+            @include span;
+            margin-bottom: 16px;
+            font-size: 12px;
+            width: 100%;
+          }
+
+          > .spanTwo {
+            @include span;
+            font-size: 12px;
+          }
+        }
+
+        > form {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+          input[type="text"],
+          textarea {
+            width: 100%;
+            max-width: 590px;
+            background-color: transparent;
+            color: white;
+            padding: 12px;
+            border: 1px solid #9747ff;
+            outline: none;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            cursor: pointer;
+            position: relative;
+
+            &::placeholder {
+              color: rgba(255, 255, 255, 1);
+              font-family: "Poppins";
+              font-weight: 400;
+              font-size: 12px;
+            }
+
+            &:hover {
+              border: 1px solid #70e61c;
+            }
+
+            &.ng-invalid.ng-touched {
+              border: 1px solid red;
+              background-image: url(../../assets/img/inputRequired.png);
+              background-repeat: no-repeat;
+              background-position: right 10px center;
+            }
+
+            &.ng-valid.ng-touched {
+              border: 1px solid #70e61c; // Grün bei gültig und berührt
+              background-image: url(../../assets/img/inputChecked.png);
+              background-repeat: no-repeat;
+              background-position: right 10px center;
+            }
+          }
+
+          .white-span {
+            color: white;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 14px;
+          }
+          .purple-span {
+            color: #9747ff;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 14px;
+            cursor: pointer;
+          }
+          .requiredspan {
+            color: red;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 12px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+          }
+          .divcheckbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            gap: 12px;
+            input[type="checkbox"] {
+              appearance: none;
+              min-width: 20px;
+              min-height: 20px;
+              border: 2px solid #70e61c;
+              border-radius: 4px;
+              cursor: pointer;
+              position: relative;
+
+              &:checked {
+                background-color: transparent;
+                border-color: #70e61c;
+              }
+
+              &:checked::before {
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 5px;
+                width: 4px;
+                height: 11px;
+                border: solid #70e61c;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+              }
+
+              &:hover {
+                border-color: #9747ff;
+              }
+            }
+          }
+          .submitbtndiv {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            input[type="submit"] {
+              background-color: #b6b6b6;
+              color: white;
+              font-family: "Poppins";
+              font-weight: 400;
+              font-size: 23px;
+              padding: 12px 20px;
+              width: 253px;
+              height: 58px;
+              border: none;
+              border-radius: 10px;
+              margin-top: 16px;
+              cursor: pointer;
+
+              &:disabled {
+                background-color: #b6b6b6;
+                cursor: not-allowed;
+              }
+
+              &:not(:disabled) {
+                background-color: #70e61c;
+                cursor: pointer;
+              }
+            }
+
+            .container {
+              border-radius: 5px;
+              background-color: #f2f2f2;
+              padding: 20px;
+            }
+          }
         }
       }
     }
