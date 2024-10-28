@@ -210,6 +210,7 @@
             margin-top: 10px;
             transition: color 125ms ease, opacity 125ms ease;
             @include p;
+            margin-top: -20px;
           }
         }
 
@@ -348,6 +349,7 @@
             transition: color 125ms ease, opacity 125ms ease;
             @include p;
             font-size: 15px;
+            margin-top: -20px;
           }
         }
 
@@ -491,6 +493,7 @@
             transition: color 125ms ease, opacity 125ms ease;
             @include p;
             font-size: 14px;
+            margin-top: -20px;
           }
         }
 
@@ -636,24 +639,22 @@
             transition: color 125ms ease, opacity 125ms ease;
             @include p;
             font-size: 14px;
+            margin-top: -20px;
           }
         }
 
-        #lastskill {
-          #lastSkillImg {
-          }
-          #lastSkillText {
-          }
+        #lastskill:hover ~ .hover-image {
+          display: block; // Bild wird angezeigt, wenn über das letzte Item gehovt wird
         }
       }
 
       .hover-image {
+        display: none; // Standardmäßig nicht sichtbar
         position: absolute;
-        top: 180px;
-        left: 420px;
-        transform: translateX(-50%);
-        transition: opacity 125ms ease;
-        opacity: 0;
+        top: 50%; // Position nach Bedarf anpassen
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; // Hover-Image überlagert die anderen Inhalte
       }
 
       .myskillbody {
