@@ -1,11 +1,10 @@
 @import "../../styles.scss";
 
 main {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-bottom: 200px;
+  margin-top: 100px;
   .heromain {
     display: flex;
     justify-content: space-between;
@@ -23,7 +22,6 @@ main {
         top: 40px;
         left: 54px;
         height: 100%;
-        width: 100%;
       }
     }
     .mainright {
@@ -114,10 +112,13 @@ main {
   }
   .coloredbackground {
     position: absolute;
-    width: 50%;
-    top: 100px;
-    left: 50px;
+    width: 80%;
+    top: 20px;
+    left: -90px;
     z-index: -10;
+  }
+  .meimg {
+    display: none;
   }
   .herobackground {
     position: absolute;
@@ -130,15 +131,12 @@ main {
 
 @media (max-width: 1500px) {
   main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-bottom: 200px;
     .heromain {
       display: flex;
       justify-content: space-between;
-
       margin: 50px 100px;
 
       .mainleft {
@@ -149,10 +147,9 @@ main {
         z-index: -6;
         img {
           position: absolute;
-          top: -10px;
+          top: 39px;
           left: 54px;
           height: 100%;
-          width: 100%;
         }
       }
       .mainright {
@@ -243,11 +240,12 @@ main {
     }
     .coloredbackground {
       position: absolute;
-      width: 50%;
-      top: 100px;
-      left: 90px;
+      width: 75%;
+      top: 79px;
+      left: -34px;
       z-index: -10;
     }
+
     .herobackground {
       position: absolute;
       z-index: -5;
@@ -260,11 +258,9 @@ main {
 
 @media (max-width: 1320px) {
   main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-bottom: 200px;
     .heromain {
       display: flex;
       justify-content: space-between;
@@ -282,7 +278,6 @@ main {
           top: 40px;
           left: 70px;
           height: 100%;
-          width: 100%;
         }
       }
       .mainright {
@@ -375,9 +370,9 @@ main {
     }
     .coloredbackground {
       position: absolute;
-      width: 50%;
-      top: 140px;
-      left: 110px;
+      width: 70%;
+      top: 40px;
+      left: 50px;
       z-index: -10;
     }
     .herobackground {
@@ -392,12 +387,10 @@ main {
 
 @media (max-width: 1100px) {
   main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 200px;
     .heromain {
       display: flex;
       flex-direction: column;
@@ -413,10 +406,9 @@ main {
         z-index: -6;
         img {
           position: absolute;
-          top: 10px;
-          left: 70px;
+          top: 20px;
+          left: 20px;
           height: 100%;
-          width: 100%;
         }
       }
       .mainright {
@@ -503,9 +495,9 @@ main {
     }
     .coloredbackground {
       position: absolute;
-      width: 80%;
-      top: 140px;
-      left: 100px;
+      width: 100%;
+      top: -60px;
+      left: 50px;
       z-index: -10;
     }
     .herobackground {
@@ -520,12 +512,10 @@ main {
 
 @media (max-width: 800px) {
   main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 200px;
     .heromain {
       display: flex;
       flex-direction: column;
@@ -541,10 +531,9 @@ main {
         z-index: -6;
         img {
           position: absolute;
-          top: 10px;
-          left: 70px;
+          top: 0px;
+          left: 20px;
           height: 100%;
-          width: 100%;
         }
       }
       .mainright {
@@ -634,11 +623,12 @@ main {
     }
     .coloredbackground {
       position: absolute;
-      width: 80%;
-      top: 140px;
-      left: 100px;
+      width: 120%;
+      top: -50px;
+      left: -40px;
       z-index: -10;
     }
+
     .herobackground {
       position: absolute;
       z-index: -5;
@@ -649,14 +639,12 @@ main {
   }
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
   main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 200px;
     .heromain {
       display: flex;
       flex-direction: column;
@@ -672,10 +660,9 @@ main {
         z-index: -6;
         img {
           position: absolute;
-          top: 70px;
-          left: 1px;
+          top: 60px;
+          left: -39px;
           height: 100%;
-          width: 100%;
         }
       }
       .mainright {
@@ -765,9 +752,9 @@ main {
     }
     .coloredbackground {
       position: absolute;
-      width: 80%;
-      top: 150px;
-      left: 70px;
+      width: 110%;
+      top: 0px;
+      left: -19px;
       z-index: -10;
     }
     .herobackground {
@@ -780,14 +767,12 @@ main {
   }
 }
 
-@media(max-width: 600px){
+@media (max-width: 600px) {
   main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 200px;
     .heromain {
       display: flex;
       flex-direction: column;
@@ -803,10 +788,9 @@ main {
         z-index: -6;
         img {
           position: absolute;
-          top: 70px;
-          left: 1px;
+          top: 80px;
+          left: -39px;
           height: 100%;
-          width: 100%;
         }
       }
       .mainright {
@@ -896,29 +880,27 @@ main {
     }
     .coloredbackground {
       position: absolute;
-      width: 90%;
-      top: 150px;
-      left: 35px;
+      width: 120%;
+      top: 50px;
+      left: -35px;
       z-index: -10;
     }
     .herobackground {
       position: absolute;
       z-index: -5;
-      width: 100%;
+      width: 105%;
       top: 340px;
       left: 0;
     }
   }
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
   main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 200px;
     margin-top: -100px;
     .heromain {
       display: flex;
@@ -936,9 +918,8 @@ main {
         img {
           position: absolute;
           top: 160px;
-          left: 5px;
+          left: -15px;
           height: 100%;
-          width: 100%;
         }
       }
       .mainright {
@@ -1028,9 +1009,9 @@ main {
     }
     .coloredbackground {
       position: absolute;
-      width: 90%;
-      top: 230px;
-      left: 25px;
+      width: 120%;
+      top: 130px;
+      left: -25px;
       z-index: -10;
     }
     .herobackground {
@@ -1043,14 +1024,12 @@ main {
   }
 }
 
-@media (max-width: 400px){
+@media (max-width: 400px) {
   main {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 200px;
     margin-top: -100px;
     .heromain {
       display: flex;
@@ -1067,10 +1046,10 @@ main {
         z-index: -6;
         img {
           position: absolute;
-          top: 160px;
-          left: 5px;
+          top: 150px;
+          left: -35px;
           height: 100%;
-          width: 100%;
+          width: 140%;
         }
       }
       .mainright {
@@ -1160,16 +1139,284 @@ main {
     }
     .coloredbackground {
       position: absolute;
-      width: 90%;
-      top: 230px;
-      left: 25px;
-      z-index: -10;
+        width: 130%;
+        top: 150px;
+        left: -35px;
+        z-index: -10;
     }
     .herobackground {
       position: absolute;
       z-index: -5;
       width: 100%;
       top: 380px;
+      left: 0;
+    }
+  }
+}
+
+@media (min-width: 1640px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 100px;
+    .heromain {
+      display: flex;
+      justify-content: space-between;
+
+      margin: 50px 100px 250px;
+      
+
+      .mainleft {
+        height: 650px;
+        width: 550px;
+        display: flex;
+        position: relative;
+        z-index: -6;
+        img {
+          display: none;
+        }
+      }
+      .mainright {
+        display: flex;
+        margin-top: 100px;
+        > div {
+          > h3 {
+            transform: rotate(270deg);
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 76px;
+            color: white;
+            white-space: nowrap;
+          }
+        }
+        > div {
+          > h1 {
+            margin: 0;
+            font-family: "Poppins";
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 108px;
+            color: white;
+            white-space: nowrap;
+          }
+          > h2 {
+            margin-top: -48px;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 69px;
+            color: #9747ff;
+          }
+        }
+      }
+    }
+    .herobottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 100px;
+      .bottomleft {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 32px;
+        .emptydiv {
+          @include purbleline;
+          width: 150px;
+        }
+        .socialicons {
+          display: flex;
+          gap: 32px;
+          > img {
+            cursor: pointer;
+            height: 30px;
+            &:hover {
+              transform: scale(1.3);
+              transition: all ease 125ms;
+            }
+          }
+        }
+        .emailadress {
+          font-family: "Poppins";
+          font-weight: 400;
+          font-size: 23px;
+          color: white;
+        }
+      }
+      .bottomright {
+        display: flex;
+        align-items: center;
+        margin-right: 100px;
+        transform: rotate(90deg);
+        > span {
+          font-family: "Poppins";
+          font-weight: 400;
+          font-size: 23px;
+          color: white;
+          white-space: nowrap;
+          .arrow {
+            transform: rotate(270deg);
+          }
+        }
+      }
+    }
+    .coloredbackground {
+      position: absolute;
+      width: 80%;
+      top: 20px;
+      left: -90px;
+      z-index: -10;
+    }
+    .meimg {
+      display: block;
+      position: absolute;
+      left: 120px;
+      top: 40px;
+      width: 50%;
+      z-index: -6;
+    }
+    .herobackground {
+      position: absolute;
+      z-index: -5;
+      width: 100%;
+      top: 250px;
+      left: 0;
+    }
+  }
+}
+
+@media (min-width: 2400px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 100px;
+    .heromain {
+      display: flex;
+      justify-content: space-between;
+
+      margin: 50px 100px 450px;
+      
+
+      .mainleft {
+        height: 650px;
+        width: 550px;
+        display: flex;
+        position: relative;
+        z-index: -6;
+        img {
+          display: none;
+        }
+      }
+      .mainright {
+        display: flex;
+        margin-top: 100px;
+        > div {
+          > h3 {
+            transform: rotate(270deg);
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 76px;
+            color: white;
+            white-space: nowrap;
+          }
+        }
+        > div {
+          > h1 {
+            margin: 0;
+            font-family: "Poppins";
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 108px;
+            color: white;
+            white-space: nowrap;
+          }
+          > h2 {
+            margin-top: -48px;
+            font-family: "Poppins";
+            font-weight: 400;
+            font-size: 44px;
+            line-height: 69px;
+            color: #9747ff;
+          }
+        }
+      }
+    }
+    .herobottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 100px;
+      .bottomleft {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 32px;
+        .emptydiv {
+          @include purbleline;
+          width: 150px;
+        }
+        .socialicons {
+          display: flex;
+          gap: 32px;
+          > img {
+            cursor: pointer;
+            height: 30px;
+            &:hover {
+              transform: scale(1.3);
+              transition: all ease 125ms;
+            }
+          }
+        }
+        .emailadress {
+          font-family: "Poppins";
+          font-weight: 400;
+          font-size: 23px;
+          color: white;
+        }
+      }
+      .bottomright {
+        display: flex;
+        align-items: center;
+        margin-right: 100px;
+        transform: rotate(90deg);
+        > span {
+          font-family: "Poppins";
+          font-weight: 400;
+          font-size: 23px;
+          color: white;
+          white-space: nowrap;
+          .arrow {
+            transform: rotate(270deg);
+          }
+        }
+      }
+    }
+    .coloredbackground {
+      position: absolute;
+      width: 80%;
+      top: 20px;
+      left: -90px;
+      z-index: -10;
+    }
+    .meimg {
+      display: block;
+      position: absolute;
+      left: 120px;
+      top: 40px;
+      width: 50%;
+      z-index: -6;
+    }
+    .herobackground {
+      position: absolute;
+      z-index: -5;
+      width: 100%;
+      top: 250px;
       left: 0;
     }
   }
