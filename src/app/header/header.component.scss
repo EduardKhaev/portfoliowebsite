@@ -211,7 +211,7 @@ header {
             position: absolute;
             left: 0;
             bottom: -4px;
-            width: 50px;
+            width: 0px;
             height: 3px;
             background-color: rgb(151, 71, 255);
           }
@@ -315,15 +315,26 @@ header {
       z-index: 9;
       gap: 60px;
 
-      a {
-        padding: 15px 20px;
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        border-bottom: 1px solid rgba(112, 230, 28, 1);
-
+      > a {
+        @include a;
         &:hover {
-          background: rgba(112, 230, 28, 0.1);
+          cursor: pointer;
+          color: rgba(112, 230, 28, 1);
+        }
+
+        &.active {
+          color: rgba(112, 230, 28, 1);
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0px;
+            height: 3px;
+            background-color: rgb(151, 71, 255);
+          }
         }
       }
     }
@@ -425,15 +436,26 @@ header {
       gap: 60px;
 
 
-      a {
-        padding: 15px 20px;
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        border-bottom: 1px solid rgba(112, 230, 28, 1);
-
+      > a {
+        @include a;
         &:hover {
-          background: rgba(112, 230, 28, 0.1);
+          cursor: pointer;
+          color: rgba(112, 230, 28, 1);
+        }
+
+        &.active {
+          color: rgba(112, 230, 28, 1);
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0px;
+            height: 3px;
+            background-color: rgb(151, 71, 255);
+          }
         }
       }
     }
