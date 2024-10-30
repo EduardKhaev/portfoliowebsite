@@ -16,6 +16,7 @@ export class ContactComponent {
   http = inject(HttpClient);
 
   mailTest = true;
+  emailStatus: string | null = null; // Variable für den E-Mail-Status
 
   contactData = {
     name: '',

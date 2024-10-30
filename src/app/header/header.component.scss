@@ -96,7 +96,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
     background: rgba(20, 29, 47, 1);
     z-index: 10;
@@ -147,7 +147,7 @@ header {
       }
     }
 
-    /* Hamburger Menu Styles */
+    
     .hamburger {
       display: block;
       cursor: pointer;
@@ -165,12 +165,12 @@ header {
       }
     }
 
-    /* Navigation wird ersetzt */
+    
     .navlinkcontainer {
       display: none;
     }
 
-    /* Offenbares Menü */
+    
     .open {
       display: flex;
       flex-direction: column;
@@ -181,18 +181,18 @@ header {
       right: 0;
       width: 100vw;
       height: 100vh;
-      background-color: rgba(0, 0, 0, 0.8); // semitransparentes Overlay
+      background-color: rgba(0, 0, 0, 0.8); 
       margin: 0;
       z-index: 9;
       gap: 60px;
 
       .navlinkcontainer {
         position: relative;
-        background-color: rgba(20, 29, 47, 1); // Menü Hintergrundfarbe
+        background-color: rgba(20, 29, 47, 1); 
         border-radius: 10px;
         margin: auto;
         padding: 20px;
-        width: 250px; // Menübreite
+        width: 250px; 
       }
 
       > a {
@@ -201,11 +201,11 @@ header {
           cursor: pointer;
           color: rgba(112, 230, 28, 1);
         }
-  
+
         &.active {
           color: rgba(112, 230, 28, 1);
           position: relative;
-  
+
           &::after {
             content: "";
             position: absolute;
@@ -228,7 +228,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
     background: rgba(20, 29, 47, 1);
     z-index: 10;
@@ -279,7 +279,7 @@ header {
       }
     }
 
-    /* Hamburger Menu Styles */
+   
     .hamburger {
       display: block;
       cursor: pointer;
@@ -294,12 +294,12 @@ header {
       }
     }
 
-    /* Navigation wird ersetzt */
+    
     .navlinkcontainer {
       display: none;
     }
 
-    /* Offenbares Menü */
+   
     .open {
       display: flex;
       flex-direction: column;
@@ -332,7 +332,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
+    position: fixed;
     top: 0;
     background: rgba(20, 29, 47, 1);
     z-index: 10;
@@ -383,7 +383,7 @@ header {
       }
     }
 
-    /* Hamburger Menu Styles */
+    
     .hamburger {
       display: block;
       cursor: pointer;
@@ -398,12 +398,12 @@ header {
       }
     }
 
-    /* Navigation wird ersetzt */
+  
     .navlinkcontainer {
       display: none;
     }
 
-    /* Offenbares Menü */
+  
     .open {
       display: flex;
       flex-direction: column;

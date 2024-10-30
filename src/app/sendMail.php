@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"): //Allow preflighting to take place.
         header("Access-Control-Allow-Origin: *");
@@ -19,7 +22,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $message = $params->message;
             $checkbox = $params->checkbox;
     
-            $recipient = 'DEINE@MAIL.de';  
+            $recipient = 'eduardpuchaew@gmx.de';  
             $subject = "Contact From <$email>";
             $message = "From:" . $name . "<br>" . $message ;
     

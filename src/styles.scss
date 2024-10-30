@@ -4,9 +4,12 @@ body {
   z-index: -10;
   box-sizing: border-box;
   overflow-x: hidden;
-  
+  overflow-y: hidden;
   
 }
+
+
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
