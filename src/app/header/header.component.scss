@@ -303,12 +303,17 @@ header {
     .open {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       position: absolute;
-      top: 110px;
-      right: 30px;
-      background-color: rgba(20, 29, 47, 1);
-      width: 200px;
+      top: -42px;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8); 
+      margin: 0;
       z-index: 9;
+      gap: 60px;
 
       a {
         padding: 15px 20px;
@@ -407,12 +412,18 @@ header {
     .open {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       position: absolute;
-      top: 110px;
-      right: 30px;
-      background-color: rgba(20, 29, 47, 1);
-      width: 200px;
+      top: -42px;
+      right: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8); 
+      margin: 0;
       z-index: 9;
+      gap: 60px;
+
 
       a {
         padding: 15px 20px;

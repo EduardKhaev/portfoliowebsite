@@ -50,6 +50,15 @@ main {
           transition: all 125ms ease;
         }
       }
+      > a {
+        > img {
+          &:hover {
+            cursor: pointer;
+            scale: 1.3;
+            transition: all 125ms ease;
+          }
+        }
+      }
     }
   }
 }
@@ -63,7 +72,7 @@ main {
     display: flex;
     align-items: center;
     background: rgba(20, 29, 47, 1);
-    
+
     > .foocontainer {
       display: none;
     }
@@ -125,7 +134,7 @@ main {
     display: flex;
     align-items: center;
     background: rgba(20, 29, 47, 1);
-    
+
     > .foocontainer {
       display: none;
     }
